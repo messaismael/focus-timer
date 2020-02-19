@@ -15,18 +15,30 @@ body {
 #control #break {
   text-align: center;
   font-family: sans-serif;
-  height: 50vh;
+  height: 30vh;
   width: 400px;
 }
 #control #session {
   text-align: center;
   font-family: sans-serif;
-  height: 50vh;
+  height: 30vh;
   width: 400px;
 }
 #control #session-length, #control #break-length {
   font-size: 30px;
   font-family: sans-serif;
+}
+
+.counter {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+#counter {
+  font-size: 50px;
+  font-weight: 900;
+  font-family: "Tangerine", serif;
 }
 
 i {
