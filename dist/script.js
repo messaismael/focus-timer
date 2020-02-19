@@ -6,7 +6,8 @@ class Application extends React.Component {
       sessionValue: 25,
       time: 25 * 60 * 1000,
       active: true,
-      mode: "Session" };
+      mode: "Session",
+      count: 0 };
 
 
     this.handleDecrementBreak = this.handleDecrementBreak.bind(this);
@@ -29,7 +30,8 @@ class Application extends React.Component {
       this.audio.play();
       this.setState({
         time: this.state.breakValue * 60 * 1000,
-        mode: "Break" });
+        mode: "Break",
+        count: this.state.count + 1 });
 
     }
 
@@ -82,6 +84,7 @@ class Application extends React.Component {
       breakValue: 5,
       sessionValue: 25,
       time: 25 * 60 * 1000,
+      count: 0,
       active: true,
       mode: "Session" });
 
@@ -138,6 +141,10 @@ class Application extends React.Component {
 
 
 
+
+      React.createElement("div", null,
+      React.createElement("div", { id: "counter", style: { textAlign: "center" } }, "counter of session"),
+      React.createElement("div", { class: "counter" }, this.state.count)),
 
       React.createElement("div", { id: "display" },
       React.createElement("h1", { id: "timer-label" }, this.state.mode),
