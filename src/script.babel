@@ -8,6 +8,7 @@ class Application extends React.Component{
       time:25 * 60 * 1000,
       active: true,
       mode:"Session",
+      count:0,
     }
     
     this.handleDecrementBreak = this.handleDecrementBreak.bind(this);
@@ -30,12 +31,13 @@ class Application extends React.Component{
       this.audio.play();
       this.setState({
         time: this.state.breakValue*60*1000,
-        mode:"Break"
+        mode:"Break",
+        count: this.state.count + 1
       })
     }
       
   }
-  
+   
   handleIncrementBreak(){
     //limit to max 60
     if(this.state.breakValue<60 && this.state.active===true){
@@ -83,6 +85,7 @@ class Application extends React.Component{
       breakValue: 5,
       sessionValue: 25,
       time: 25 * 60 * 1000,
+      count: 0,
       active: true,
       mode:"Session",
     })
@@ -139,7 +142,11 @@ class Application extends React.Component{
           </div>
           </div>
          </div>
-       </div>  
+       </div>
+       <div>
+           <div id="counter" style={{textAlign:"center"}}>counter of session</div>
+         <div class ="counter">{this.state.count}</div>
+       </div>
          <div id='display'>
           <h1 id="timer-label">{this.state.mode}</h1>
           <h1 id='time-left' style = {{"color":col}}>{moment(this.state.time).format("mm:ss")}</h1>
