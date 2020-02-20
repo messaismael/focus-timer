@@ -2,9 +2,10 @@
   "name": "pomodoro-clock",
   "version": "1.0.0",
   "description": "pomodoro clock for Pc",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron .",
+    "status": "git status"
   },
   "repository": {
     "type": "git",
