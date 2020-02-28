@@ -131,7 +131,7 @@ class Application extends React.Component{
          </div>
          
         <div id='session'>
-          <h2 id= 'session-label'>Session Length</h2>
+          <h2 id= 'session-label'>Session length</h2>
           <div id='value'>
           <div id= 'session-increment' onClick={this.handleIncrementSession}>
             <i className='fa fa-arrow-up'></i>
@@ -161,11 +161,6 @@ class Application extends React.Component{
             </div>
           </div>
           <audio id='beep' src="https://goo.gl/65cBl1" ref={i =>this.audio= i} />
-         </div>
-         
-         
-         <div className='author'>
-           <a href="https://github.com/messaismael" target='_blank' style={{color:"black"}}> by Ismael</a>
          </div>
       </div>
      )

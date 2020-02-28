@@ -1,56 +1,44 @@
 body {
-  background-color: orange;
-}
+  background-color: red; }
 
 #pomodoro {
   height: 98vh;
-  width: 100%;
-}
+  width: 100%; }
 
 #control {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-#control #break {
-  text-align: center;
-  font-family: sans-serif;
-  height: 30vh;
-  width: 400px;
-}
-#control #session {
-  text-align: center;
-  font-family: sans-serif;
-  height: 30vh;
-  width: 400px;
-}
-#control #session-length, #control #break-length {
-  font-size: 30px;
-  font-family: sans-serif;
-}
+  align-items: center; }
+  #control #break {
+    text-align: center;
+    font-family: sans-serif;
+    height: 30vh;
+    width: 400px; }
+  #control #session {
+    text-align: center;
+    font-family: sans-serif;
+    height: 30vh;
+    width: 400px; }
+  #control #session-length, #control #break-length {
+    font-size: 30px;
+    font-family: sans-serif; }
 
 .counter {
   text-align: center;
   font-size: 30px;
-  font-weight: 900;
-}
+  font-weight: 900; }
 
 #counter {
   font-size: 50px;
-  font-weight: 900;
-  font-family: "Tangerine", serif;
-}
+  font-weight: 900; }
 
 i {
   font-size: 30px;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 #session-label, #break-label {
   font-size: 40px;
-  font-weight: 900;
-  font-family: "Tangerine", serif;
-}
+  font-weight: 900; }
 
 #display {
   display: block;
@@ -60,52 +48,42 @@ i {
   margin: auto;
   padding: 5px 0px 30px 0px;
   font-size: 25px;
-  width: 450px;
-}
-#display #start_stop, #display #reset {
-  margin-top: 15px;
-  color: orange;
-  width: 50px;
-}
-#display #timer-label {
-  color: white;
-}
-#display #time-left {
-  margin: 0px 15px;
-}
+  width: 450px; }
+  #display #start_stop, #display #reset {
+    margin-top: 15px;
+    color: orange;
+    width: 50px; }
+  #display #timer-label {
+    color: white; }
+  #display #time-left {
+    margin: 0px 15px; }
 
 @media only screen and (max-width: 550px) {
   #pomodoro {
     padding-top: 30vw;
     margin-top: 0px;
     width: 100%;
-    height: 99vh;
-  }
-  #pomodoro #break {
-    width: 130px;
-    height: 5em;
-    margin-top: 7.5vh;
-    margin-right: 30px;
-  }
-  #pomodoro #session {
-    width: 130px;
-    height: 5em;
-    margin-top: 7.5vh;
-    margin-left: 30px;
-  }
-  #pomodoro #display {
-    display: block;
-    font-size: 15px;
-    padding-top: 20px;
-    width: 300px;
-  }
-  #pomodoro #display #start_stop, #pomodoro #display #reset {
-    color: orange;
-    margin-top: 0px;
-  }
-}
-.author, .title {
-  font-family: "Tangerine", serif;
+    height: 99vh; }
+    #pomodoro #break {
+      width: 130px;
+      height: 5em;
+      margin-top: 7.5vh;
+      margin-right: 30px; }
+    #pomodoro #session {
+      width: 130px;
+      height: 5em;
+      margin-top: 7.5vh;
+      margin-left: 30px; }
+    #pomodoro #display {
+      display: block;
+      font-size: 15px;
+      padding-top: 20px;
+      width: 300px; }
+      #pomodoro #display #start_stop, #pomodoro #display #reset {
+        color: orange;
+        margin-top: 0px; } }
+
+.title {
   font-size: 40px;
   font-weight: 900;
   margin: auto;
@@ -113,64 +91,50 @@ i {
   width: 200px;
   display: block;
   margin-top: 15px;
-  color: black;
-}
+  color: black; }
 
 @media only screen and (max-height: 600px) {
   #pomodoro {
     margin-top: 0px;
     display: block;
     width: 100%;
-    height: 99vh;
-  }
-  #pomodoro #break {
-    display: block;
-    width: 19em;
-    margin-top: 10px;
-    height: 150px;
-  }
-  #pomodoro #break #value {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #pomodoro #break #value #break-length {
-    margin: 0px 8px;
-    font-size: 30px;
-  }
-  #pomodoro #session {
-    display: block;
-    width: 20em;
-    margin-top: 10px;
-    height: 150px;
-  }
-  #pomodoro #session #value {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #pomodoro #session #value #session-length {
-    margin: 0px 8px;
-    font-size: 30px;
-  }
-  #pomodoro #display {
-    height: 80px;
-    font-size: 14px;
-    width: 400px;
-  }
-  #pomodoro #display #time-left, #pomodoro #display #timer-label, #pomodoro #display #start_stop, #pomodoro #display #reset {
-    margin-left: 20px;
-    float: left;
-  }
-  #pomodoro #display #time-left {
-    margin-top: 10px;
-  }
-  #pomodoro #display #start_stop {
-    margin-left: -25px;
-    margin-top: 20px;
-  }
-  #pomodoro #display #reset {
-    margin-top: 20px;
-    margin-left: -15px;
-  }
-}
+    height: 99vh; }
+    #pomodoro #break {
+      display: block;
+      width: 19em;
+      margin-top: 10px;
+      height: 150px; }
+      #pomodoro #break #value {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #pomodoro #break #value #break-length {
+          margin: 0px 8px;
+          font-size: 30px; }
+    #pomodoro #session {
+      display: block;
+      width: 20em;
+      margin-top: 10px;
+      height: 150px; }
+      #pomodoro #session #value {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #pomodoro #session #value #session-length {
+          margin: 0px 8px;
+          font-size: 30px; }
+    #pomodoro #display {
+      height: 80px;
+      font-size: 14px;
+      width: 400px; }
+      #pomodoro #display #time-left, #pomodoro #display #timer-label, #pomodoro #display #start_stop, #pomodoro #display #reset {
+        margin-left: 20px;
+        float: left; }
+      #pomodoro #display #time-left {
+        margin-top: 10px; }
+      #pomodoro #display #start_stop {
+        margin-left: -25px;
+        margin-top: 20px; }
+      #pomodoro #display #reset {
+        margin-top: 20px;
+        margin-left: -15px; } }

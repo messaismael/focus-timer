@@ -5,7 +5,10 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "status": "git status"
+    "status": "git status",
+    "scss": "node-sass --watch src -o dist",
+    "babel": "babel --presets @babel/preset-react --watch src -d dist",
+    "updatechange": "concurrently \"npm run babel\" \"npm run scss\""
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,14 @@
   },
   "homepage": "https://github.com/messaismael/Pomodoro-Clock#readme",
   "devDependencies": {
-    "electron": "^8.0.1"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-react": "^7.8.3",
+    "electron": "^8.0.1",
+    "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "concurrently": "^5.1.0"
   }
 }
