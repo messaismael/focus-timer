@@ -118,80 +118,99 @@ class Application extends React.Component {
     }
 
     return React.createElement("div", {
-      id: "pomodoro"
-    }, React.createElement("h1", {
-      className: "title"
-    }, "Pomodoro Clock"), React.createElement("div", {
-      id: "control"
+      className: "container"
     }, React.createElement("div", {
-      id: "break"
-    }, React.createElement("h2", {
+      className: "row wid"
+    }, React.createElement("div", {
+      id: "pomodoro",
+      className: "col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2"
+    }, React.createElement("div", {
+      className: "row"
+    }, React.createElement("div", {
+      className: "title col-md-12"
+    }, "Pomodoro Clock")), React.createElement("div", {
+      id: "control",
+      className: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+    }, React.createElement("div", {
+      id: "break",
+      className: "col-sm-4 col-xs-12"
+    }, React.createElement("div", null, React.createElement("h2", {
       id: "break-label"
-    }, "Break Length"), React.createElement("div", {
-      id: "value"
+    }, "Break"), React.createElement("div", {
+      className: "row"
     }, React.createElement("div", {
       id: "break-increment",
+      className: "col-sm-12 col-sm-offset-0 col-xs-2 col-xs-offset-2",
       onClick: this.handleIncrementBreak
     }, React.createElement("i", {
       className: "fa fa-arrow-up"
     })), React.createElement("div", {
-      id: "break-length"
+      id: "break-length",
+      className: "col-sm-12 col-xs-4"
     }, this.state.breakValue), React.createElement("div", {
       id: "break-decrement",
+      className: "col-sm-12 col-xs-2",
       onClick: this.handleDecrementBreak
     }, React.createElement("i", {
       className: "fa fa-arrow-down"
-    })))), React.createElement("div", {
-      id: "session"
-    }, React.createElement("h2", {
+    }))))), React.createElement("div", {
+      className: " col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0",
+      id: "counter"
+    }, React.createElement("div", null, "Counter"), React.createElement("div", {
+      class: "counter"
+    }, this.state.count)), React.createElement("div", {
+      id: "session",
+      className: "col-sm-4 col-xs-12"
+    }, React.createElement("div", null, React.createElement("h2", {
       id: "session-label"
-    }, "Session length"), React.createElement("div", {
-      id: "value"
+    }, "Session"), React.createElement("div", {
+      className: "row"
     }, React.createElement("div", {
       id: "session-increment",
+      className: "col-sm-12 col-sm-offset-0 col-xs-2 col-xs-offset-2",
       onClick: this.handleIncrementSession
     }, React.createElement("i", {
       className: "fa fa-arrow-up"
     })), React.createElement("div", {
-      id: "session-length"
+      id: "session-length",
+      className: "col-sm-12 col-xs-4"
     }, this.state.sessionValue), React.createElement("div", {
       id: "session-decrement",
+      className: "col-sm-12 col-xs-2",
       onClick: this.handleDecrementSession
     }, React.createElement("i", {
       className: "fa fa-arrow-down"
-    }))))), React.createElement("div", null, React.createElement("div", {
-      id: "counter",
-      style: {
-        textAlign: "center"
-      }
-    }, "counter of session"), React.createElement("div", {
-      class: "counter"
-    }, this.state.count)), React.createElement("div", {
-      id: "display"
-    }, React.createElement("h1", {
-      id: "timer-label"
-    }, this.state.mode), React.createElement("h1", {
+    })))))), React.createElement("div", {
+      className: "row"
+    }, React.createElement("div", {
+      id: "display",
+      className: "col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2"
+    }, React.createElement("div", {
+      id: "timer-label",
+      className: " col-sm-4 col-xs-12"
+    }, this.state.mode + ": "), React.createElement("div", {
       id: "time-left",
+      className: "col-sm-4 col-xs-12",
       style: {
         "color": col
       }
     }, moment(this.state.time).format("mm:ss")), React.createElement("div", {
-      id: "control"
-    }, React.createElement("div", {
       id: "start_stop",
+      className: "col-sm-2 col-sm-offset-0 col-xs-3 col-xs-offset-2",
       onClick: this.handlePlay
     }, React.createElement("i", {
       className: this.state.active ? "fa fa-play" : "fa fa-pause"
     })), React.createElement("div", {
       id: "reset",
+      className: "col-sm-2 col-sm-offset-0 col-xs-3 col-xs-offset-2",
       onClick: this.handleReset
     }, React.createElement("i", {
       className: "fa fa-redo"
-    }))), React.createElement("audio", {
+    })))), React.createElement("audio", {
       id: "beep",
       src: "https://goo.gl/65cBl1",
       ref: i => this.audio = i
-    })));
+    }))));
   }
 
 }

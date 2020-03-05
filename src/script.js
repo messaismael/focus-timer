@@ -108,63 +108,71 @@ class Application extends React.Component{
     }
   }
     
-   render(){
-     let col='white';
-     if(this.state.time <(60*1000)) {
-       col='red';
-     }
-     return(
-      <div id="pomodoro">
-      <h1 className='title'>Pomodoro Clock</h1>
-      <div id='control'>   
-         <div id='break'>
-          <h2 id= 'break-label'>Break Length</h2>
-          <div id='value'>
-          <div id= 'break-increment' onClick={this.handleIncrementBreak}>
-            <i className='fa fa-arrow-up'></i>
+  render(){
+    let col='white';
+    if(this.state.time <(60*1000)) {
+      col='red';
+    }
+    return(
+    <div className="container">
+    <div className="row wid">
+      <div id="pomodoro" className="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2" >
+          <div className='row'>
+            <div className='title col-md-12'>Pomodoro Clock</div>
           </div>
-          <div id='break-length'>{this.state.breakValue}</div>
-          <div id= 'break-decrement' onClick={this.handleDecrementBreak}>
-            <i className='fa fa-arrow-down'></i>
-          </div>
-          </div>
-         </div>
-         
-        <div id='session'>
-          <h2 id= 'session-label'>Session length</h2>
-          <div id='value'>
-          <div id= 'session-increment' onClick={this.handleIncrementSession}>
-            <i className='fa fa-arrow-up'></i>
-          </div>
-          <div id='session-length'>{this.state.sessionValue}</div>
-          <div id= 'session-decrement' onClick={this.handleDecrementSession}>
-            <i className='fa fa-arrow-down'></i>
-          </div>
-          </div>
-         </div>
-       </div>
-       <div>
-           <div id="counter" style={{textAlign:"center"}}>counter of session</div>
-         <div class ="counter">{this.state.count}</div>
-       </div>
-         <div id='display'>
-          <h1 id="timer-label">{this.state.mode}</h1>
-          <h1 id='time-left' style = {{"color":col}}>{moment(this.state.time).format("mm:ss")}</h1>
-           
-          <div id='control'>          
-            <div id="start_stop" onClick={this.handlePlay}>
-              {/* change icon after a click*/}
-               <i className={this.state.active? "fa fa-play":"fa fa-pause"}></i>
-            </div>
-            <div id='reset' onClick={this.handleReset}>
-               <i className='fa fa-redo'></i>
+        <div id='control' className="col-lg-12 col-md-12 col-sm-12 col-xs-12">   
+
+          <div id='break' className="col-sm-4 col-xs-12">
+            <div>
+              <h2 id= 'break-label'>Break</h2>
+              <div className="row">
+                <div id="break-increment" className="col-sm-12 col-sm-offset-0 col-xs-2 col-xs-offset-2" onClick={this.handleIncrementBreak}>
+                  <i className='fa fa-arrow-up'></i>
+                </div>
+                <div id="break-length" className="col-sm-12 col-xs-4">{this.state.breakValue}</div>
+                <div id="break-decrement" className="col-sm-12 col-xs-2" onClick={this.handleDecrementBreak}>
+                  <i className='fa fa-arrow-down'></i>
+                </div>
+              </div>
             </div>
           </div>
-          <audio id='beep' src="https://goo.gl/65cBl1" ref={i =>this.audio= i} />
-         </div>
+          <div className=" col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0" id="counter">
+            <div >Counter</div>
+            <div class ="counter">{this.state.count}</div>
+          </div>
+          <div id='session' className="col-sm-4 col-xs-12">
+            <div>
+              <h2 id='session-label'>Session</h2>
+              <div className='row'>
+                <div id= 'session-increment' className="col-sm-12 col-sm-offset-0 col-xs-2 col-xs-offset-2" onClick={this.handleIncrementSession}>
+                  <i className='fa fa-arrow-up'></i>
+                </div>
+                <div id='session-length' className="col-sm-12 col-xs-4">{this.state.sessionValue}</div>
+                <div id= 'session-decrement' className="col-sm-12 col-xs-2" onClick={this.handleDecrementSession}>
+                  <i className='fa fa-arrow-down'></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='row'>
+        <div id='display' className='col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2'>
+        
+          <div id="timer-label" className=' col-sm-4 col-xs-12' >{this.state.mode+": "}</div>
+          <div id='time-left' className='col-sm-4 col-xs-12' style={{"color":col}}>{moment(this.state.time).format("mm:ss")}</div>           
+          <div id="start_stop" className='col-sm-2 col-sm-offset-0 col-xs-3 col-xs-offset-2' onClick={this.handlePlay}>
+              <i className={this.state.active? "fa fa-play":"fa fa-pause"}></i>
+          </div>
+          <div id='reset' className='col-sm-2 col-sm-offset-0 col-xs-3 col-xs-offset-2' onClick={this.handleReset}>
+            <i className='fa fa-redo'></i>
+          </div>
+        </div>
+        
+        </div>
+        <audio id='beep' src="https://goo.gl/65cBl1" ref={i =>this.audio= i} />
       </div>
-     )
-   }
+  </div></div>)
+  }
 }
 
 ReactDOM.render(<Application />, document.getElementById('app'))
