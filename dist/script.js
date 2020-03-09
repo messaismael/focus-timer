@@ -128,7 +128,9 @@ class Application extends React.Component {
       className: "row"
     }, React.createElement("div", {
       className: "title col-md-12"
-    }, "Pomodoro Clock")), React.createElement("div", {
+    }, React.createElement("img", {
+      src: "../logo/logo4.png"
+    }))), React.createElement("div", {
       id: "control",
       className: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
     }, React.createElement("div", {

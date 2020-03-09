@@ -118,7 +118,10 @@ class Application extends React.Component{
     <div className="row wid">
       <div id="pomodoro" className="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2" >
           <div className='row'>
-            <div className='title col-md-12'>Pomodoro Clock</div>
+            <div className='title col-md-12'>
+              <img src="../logo/logo4.png" />
+              {/*<div>Focus timer</div>*/}
+            </div>
           </div>
         <div id='control' className="col-lg-12 col-md-12 col-sm-12 col-xs-12">   
 

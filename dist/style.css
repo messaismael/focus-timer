@@ -20,6 +20,9 @@ body {
   text-align: center;
   padding: 10px;
   color: black; }
+  .title img {
+    height: 150px;
+    width: 150px; }
 
 #pomodoro {
   padding: 5px; }
