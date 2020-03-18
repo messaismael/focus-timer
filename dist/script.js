@@ -156,7 +156,7 @@ class Application extends React.Component {
     }, React.createElement("i", {
       className: "fa fa-arrow-down"
     }))))), React.createElement("div", {
-      className: " col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0",
+      className: "col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0",
       id: "counter"
     }, React.createElement("div", null, "Counter"), React.createElement("div", {
       class: "counter"
@@ -186,13 +186,13 @@ class Application extends React.Component {
       className: "row"
     }, React.createElement("div", {
       id: "display",
-      className: "col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2"
+      className: "col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2"
     }, React.createElement("div", {
       id: "timer-label",
-      className: " col-sm-4 col-xs-12"
+      className: "col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2"
     }, this.state.mode + ": "), React.createElement("div", {
       id: "time-left",
-      className: "col-sm-4 col-xs-12",
+      className: "col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2",
       style: {
         "color": col
       }
@@ -210,7 +210,7 @@ class Application extends React.Component {
       className: "fa fa-redo"
     })))), React.createElement("audio", {
       id: "beep",
-      src: "https://goo.gl/65cBl1",
+      src: "../sound/BeepSound.mp3",
       ref: i => this.audio = i
     }))));
   }

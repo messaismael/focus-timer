@@ -95,11 +95,13 @@ i {
   #display #timer-label {
     color: white;
     padding: 10px;
+    text-align: center;
     font-size: 30px; }
   #display #time-left {
-    padding: 10px 20px 10px 0px; }
+    padding: 10px 20px 10px 0px;
+    text-align: center; }
   #display #start_stop, #display #reset {
-    padding: 10px;
+    padding: 10px 10px 0 10px;
     text-align: center; }
     #display #start_stop .fa, #display #reset .fa {
       color: orange;
@@ -115,3 +117,11 @@ i {
     margin-top: 50px; }
   #display {
     margin-top: 50px; } }
+
+@media only screen and (max-width: 400px) {
+  #pomodoro {
+    width: 410px; } }
+
+@media only screen and (max-height: 600px) {
+  #pomodoro {
+    height: 600px; } }

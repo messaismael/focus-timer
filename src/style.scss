@@ -108,21 +108,23 @@ i {
   border: 1px solid rebeccapurple;
   font-size: 30px;
   text-align: center;
-  color: black;
+  color:black;
   background-color: black;
   font-weight:900;
   #timer-label {
     color: white;
     padding: 10px;
+    text-align: center;
     //background-color: navy;
     font-size: 30px;  
   }
   #time-left {
     padding: 10px 20px 10px 0px;
+    text-align: center;
     //background-color: orange;
   }
   #start_stop, #reset {
-    padding: 10px;
+    padding: 10px 10px 0 10px;
     text-align: center;
     //background-color: indigo;
     .fa{
@@ -146,5 +148,17 @@ i {
   }
   #display{
     margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width:400px) {
+  #pomodoro{
+    width: 410px;
+}
+}
+
+@media only screen and (max-height:600px) {
+  #pomodoro{
+    height:600px; 
   }
 }

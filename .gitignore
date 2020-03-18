@@ -5,4 +5,9 @@
 !.vscode/extensions.json
 *.code-workspace
 node_modules
-installers
+electron/installers
+electron/dist/
+electron/logo/
+electron/build/icon.iconset/**
+electron/sound/
+electron/bootstrap-3.3.7-dist/**

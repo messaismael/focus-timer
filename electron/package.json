@@ -5,14 +5,9 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "status": "git status",
-    "scss": "node-sass --watch src -o dist",
-    "babel": "babel --presets @babel/preset-react --watch src -d dist",
-    "updatechange": "npm run babel && npm run scss",
-    "electron-build:linux": "electron-builder build --linux",
+    "electron-build:linux": "cp -R ../dist ../logo ../sound ../bootstrap-3.3.7-dist ./ && electron-builder build --linux",
     "electron-build:windows": "electron-builder build --windows",
-    "electron-build:mac": "electron-builder build --mac",
-    "postinstall": "electron-builder install-app-deps"
+    "electron-build:mac": "electron-builder build --mac"
   },
   "repository": {
     "type": "git",
@@ -28,20 +23,42 @@
   },
   "homepage": "https://github.com/messaismael/Pomodoro-Clock#readme",
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.6",
-    "@babel/preset-env": "^7.8.6",
-    "@babel/preset-react": "^7.8.3",
     "electron": "^8.0.1",
     "electron-builder": "^22.4.0",
     "node-sass": "^4.13.1"
   },
   "dependencies": {
-    "about-window": "^1.13.2",
-    "concurrently": "^5.1.0",
-    "path": "^0.12.7"
+    "about-window": "^1.13.2"
   },
   "build": {
+    "files": [
+      "main.js",
+      "dist/**/*",
+      "logo/**/*",
+      "sound/**/*",
+      "bootstrap-3.3.7-dist/**/*",
+      "package.json",
+      "embedded.provisionprofile",
+      "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+      "!**/node_modules/*.d.ts",
+      "!**/node_modules/*.o",
+      "!**/node_modules/.bin",
+      "!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
+      "!.editorconfig",
+      "!**/._*",
+      "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,.gitignore,.gitattributes}",
+      "!**/{__pycache__,thumbs.db,.flowconfig,.idea,.vs,.nyc_output}",
+      "!**/{appveyor.yml,.travis.yml,circle.yml}",
+      "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}",
+      "!**/node_modules/*/build${/*}",
+      "!**/node_modules/*/build/**/*.node",
+      "!**/node_modules/*/build/**/*.o",
+      "!**/node_modules/**/{*.cc,*.c,*.h,*.obj,*.pdb,*.sym,*.dsym,*.o}",
+      "!installers${/*}",
+      "!.git${/*}",
+      "!.+\\.o$"
+    ],
     "asar": true,
     "extends": null,
     "productName": "Focus Timer",

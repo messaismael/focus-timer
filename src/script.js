@@ -119,7 +119,7 @@ class Application extends React.Component{
       <div id="pomodoro" className="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2" >
           <div className='row'>
             <div className='title col-md-12'>
-              <img src="../logo/logo4.png" />
+              <img src="../logo/logo4.png"/>
               {/*<div>Focus timer</div>*/}
             </div>
           </div>
@@ -139,7 +139,7 @@ class Application extends React.Component{
               </div>
             </div>
           </div>
-          <div className=" col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0" id="counter">
+          <div className="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0" id="counter">
             <div >Counter</div>
             <div class ="counter">{this.state.count}</div>
           </div>
@@ -159,10 +159,10 @@ class Application extends React.Component{
           </div>
         </div>
         <div className='row'>
-        <div id='display' className='col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2'>
+        <div id='display' className='col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2'>
         
-          <div id="timer-label" className=' col-sm-4 col-xs-12' >{this.state.mode+": "}</div>
-          <div id='time-left' className='col-sm-4 col-xs-12' style={{"color":col}}>{moment(this.state.time).format("mm:ss")}</div>           
+          <div id="timer-label" className='col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2'>{this.state.mode+": "}</div>
+          <div id='time-left' className='col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2' style={{"color":col}}>{moment(this.state.time).format("mm:ss")}</div>           
           <div id="start_stop" className='col-sm-2 col-sm-offset-0 col-xs-3 col-xs-offset-2' onClick={this.handlePlay}>
               <i className={this.state.active? "fa fa-play":"fa fa-pause"}></i>
           </div>
@@ -172,7 +172,7 @@ class Application extends React.Component{
         </div>
         
         </div>
-        <audio id='beep' src="https://goo.gl/65cBl1" ref={i =>this.audio= i} />
+        <audio id='beep' src="../sound/BeepSound.mp3" ref={i =>this.audio= i} />
       </div>
   </div></div>)
   }
