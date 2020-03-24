@@ -27,7 +27,11 @@ An app to manage your working time well
   
   ``& npm install``
   
+  ### How to use
   
+  ``
+  npm run start
+  ``
   
   
   
