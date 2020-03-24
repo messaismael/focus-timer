@@ -30,8 +30,7 @@ An app to manage your working time well
    
 ### Development  
 
-In case of modification of a file in ``src/`` directory you need to compile this towards file in ``dist/`` directory for that you execute this command in 
-
+In case of modification of a file in ``src/`` directory you need to compile this towards file in ``dist/`` directory for that you execute this command in main repository
 
 ``
 $ npm run updatechange
