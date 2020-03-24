@@ -15,4 +15,20 @@ An app to manage your working time well
 ``
 & git clone https://github.com/messaismael/Pomodoro-Clock.git
 ``
- 
+ 2. install electronjs
+  
+ In the project
+  
+   ``
+   & npm install
+   ``
+   
+  ``
+  & cd electron/
+  
+  & npm install
+  ``
+  
+  
+  
+  
