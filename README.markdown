@@ -17,6 +17,7 @@ An app to manage your working time well
 ``
 
  2. In the project
+ 
    ``
    & npm install
    ``
@@ -28,6 +29,8 @@ An app to manage your working time well
   ``& npm install``
   
   ### How to use
+  
+  To execute app:
   
   ``
   npm run start
