@@ -10,19 +10,19 @@ An app to manage your working time well
 
 ### Installing
 
- 1. clone this repository
+ 1. **clone this repository**
  
    ``
     & git clone https://github.com/messaismael/Pomodoro-Clock.git
    ``
 
- 2. In the project
+ 2. **In the project**
  
    ``
    & npm install
    ``
    
- 3. then
+ 3. **then**
  
    ``& cd electron/``
   
