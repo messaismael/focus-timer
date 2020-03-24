@@ -13,6 +13,8 @@ An app to manage your working time well
  1. clone this repository
  
 ``
+
 & git clone https://github.com/messaismael/Pomodoro-Clock.git
+
 ``
  
