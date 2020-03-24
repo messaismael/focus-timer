@@ -3,7 +3,7 @@ path =  require("path");
 const openAboutWindow = require('about-window').default;
 
 function createWindow () {
-  // Cree la fenetre du navigateur.
+
   let win = new BrowserWindow({
     width: 900,
     height: 800,
@@ -13,10 +13,6 @@ function createWindow () {
       nodeIntegration: true,
     }
   })
-  //webPreferences: {
-  //  webSecurity: false,
-  //  nodeIntegration: true,
-  //}
 
   win.loadFile(path.join(`./dist/index.html`))
 

@@ -4,15 +4,9 @@
   "description": "handle your work time",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "status": "git status",
     "scss": "node-sass --watch src -o dist",
     "babel": "babel --presets @babel/preset-react --watch src -d dist",
-    "updatechange": "npm run babel && npm run scss",
-    "electron-build:linux": "electron-builder build --linux",
-    "electron-build:windows": "electron-builder build --windows",
-    "electron-build:mac": "electron-builder build --mac",
-    "postinstall": "electron-builder install-app-deps"
+    "updatechange": "npm run babel && npm run scss"
   },
   "repository": {
     "type": "git",
@@ -32,78 +26,9 @@
     "@babel/core": "^7.8.6",
     "@babel/preset-env": "^7.8.6",
     "@babel/preset-react": "^7.8.3",
-    "electron": "^8.0.1",
-    "electron-builder": "^22.4.0",
     "node-sass": "^4.13.1"
   },
   "dependencies": {
-    "about-window": "^1.13.2",
-    "concurrently": "^5.1.0",
     "path": "^0.12.7"
-  },
-  "build": {
-    "asar": true,
-    "extends": null,
-    "productName": "Focus Timer",
-    "icon": "build/icon.png",
-    "copyright": "Copyright © Focus Timer 2020",
-    "directories": {
-      "output": "installers"
-    },
-    "buildVersion": "0302205",
-    "dmg": {
-      "title": "Focus Timer",
-      "contents": [
-        {
-          "x": 110,
-          "y": 150
-        },
-        {
-          "x": 240,
-          "y": 150,
-          "type": "link",
-          "path": "/Applications"
-        }
-      ]
-    },
-    "mac": {
-      "icon": "build/icon.icns",
-      "target": [
-        "pkg",
-        "dmg",
-        "mas",
-        "zip"
-      ],
-      "artifactName": "focus-timer-${version}.${ext}",
-      "category": "public.app-category.entertainment",
-      "electronLanguages": [
-        "en"
-      ]
-    },
-    "mas": {
-      "type": "distribution",
-      "icon": "build/icon.icns",
-      "category": "public.app-category.entertainment"
-    },
-    "linux": {
-      "category": "AudioVideo",
-      "artifactName": "focus-timer-${version}.${ext}",
-      "target": [
-        "AppImage",
-        "deb"
-      ],
-      "desktop": {
-        "Terminal": "false",
-        "Type": "Application",
-        "Name": "Focus Timer",
-        "maintainer": "Ismael Dassi <messaismael01@gmail.com>",
-        "Categories": "GTK;GNOME;Utility;"
-      }
-    },
-    "win": {
-      "target": "nsis",
-      "icon": "build/icon.ico",
-      "artifactName": "focus-timer-${version}.${ext}"
-    }
   }
 }
