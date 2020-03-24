@@ -8,6 +8,8 @@ An app to manage your working time well
 - pause/play during session or break
 - responsive disign
 
-### Intalling
- 
+### Installing
+
+ 1. clone this repository
+ >> git clone https://github.com/messaismael/Pomodoro-Clock.git
  
