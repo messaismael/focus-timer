@@ -1,4 +1,14 @@
-# Fork Me! FCC: Pomodoro clock
- _A Pen created at CodePen.io. Original URL: [https://codepen.io/messaismael/pen/BaaRQWa](https://codepen.io/messaismael/pen/BaaRQWa).
+#Pomodoro clock
 
+An app to manage your working time well
+
+#Features
+
+- define session length and break length
+- reset the session, break and display
+- pause/play during session or break
+- responsive disign
+
+#Intalling
+ 
  
