@@ -22,7 +22,7 @@ An app to manage your working time well
    & npm install
    ``
    
- 3.  then
+ 3. then
  
    ``& cd electron/``
   
@@ -38,8 +38,8 @@ An app to manage your working time well
   
 ### Author
 
-[Ismael Dassi](https://github.com/messaismael)
+- [Ismael Dassi](https://github.com/messaismael)
 
-see also the list of [contributors](https://github.com/messaismael/Pomodoro-Clock/graphs/contributors)who participate of this project
+- see also the list of [contributors](https://github.com/messaismael/Pomodoro-Clock/graphs/contributors)who participate of this project
   
   
