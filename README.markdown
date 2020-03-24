@@ -27,7 +27,6 @@ An app to manage your working time well
  
   ``
   & cd electron/
-  
   & npm install
   ``
   
