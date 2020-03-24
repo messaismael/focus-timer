@@ -3,10 +3,10 @@
 An app to manage your working time well
 
 ### Features
-- define session length and break length
-- reset the session, break and display
-- pause/play during session or break
-- responsive disign
+ - define session length and break length
+ - reset the session, break and display
+ - pause/play during session or break
+ - responsive disign
 
 ### Installing
 
@@ -27,7 +27,16 @@ An app to manage your working time well
    ``$ cd electron/``
   
    ``$ npm install``
-  
+   
+### Development  
+
+In case of modification of a file in ``src/`` directory you need to compile this towards file in ``dist/`` directory for that you execute this command in 
+
+
+``
+$ npm run updatechange
+``
+
 ### How to use
   
   To execute app:
