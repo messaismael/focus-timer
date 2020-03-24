@@ -38,8 +38,5 @@ An app to manage your working time well
   
 ### Author
 
-- [Ismael Dassi](https://github.com/messaismael)
-
-- see also the list of [contributors](https://github.com/messaismael/Pomodoro-Clock/graphs/contributors)who participate of this project
-  
+- [Ismael Dassi](https://github.com/messaismael)  
   
