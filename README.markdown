@@ -33,7 +33,7 @@ An app to manage your working time well
   To execute app:
   
   ``
-  npm run start
+  & npm run start
   ``
   
   
