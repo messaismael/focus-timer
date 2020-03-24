@@ -12,9 +12,9 @@ An app to manage your working time well
 
  1. clone this repository
  
-``
-& git clone https://github.com/messaismael/Pomodoro-Clock.git
-``
+   ``
+    & git clone https://github.com/messaismael/Pomodoro-Clock.git
+   ``
 
  2. In the project
  
@@ -24,11 +24,11 @@ An app to manage your working time well
    
  3.  then
  
-  ``& cd electron/``
+   ``& cd electron/``
   
-  ``& npm install``
+   ``& npm install``
   
-  ### How to use
+### How to use
   
   To execute app:
   
