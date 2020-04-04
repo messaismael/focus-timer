@@ -1,0 +1,54 @@
+body{
+ padding:0;
+ background-color: orange;
+}
+
+#all {
+  overflow-x: hidden;
+  padding:0;
+  background-color: orange;
+  height: 100vh;  
+}
+
+#pomodoro {
+  padding:0;
+  text-align: center;
+  height: 85vh;
+}
+ 
+#cent{
+  height: 70%;
+}
+
+#control {
+  height: 60%;
+}
+
+@media only screen and (max-width: 575px) {
+  #nav{
+    width: 100vw;
+  }
+
+  #control{
+    height: 60%;
+    margin-top: 50px;
+  }
+  #cent{
+    height: 85vh;
+  }
+}
+
+@media only screen and (max-height:750px) {
+  #all {
+    height: 100vh;
+  }
+  #pomodoro {
+    height: 600px;
+  }
+  #cent{
+    height: 650px;
+  }
+  #control{
+    margin-top: 50px;
+  }
+}

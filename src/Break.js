@@ -1,0 +1,24 @@
+import React from 'react';
+import './Break.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowCircleUp, faArrowCircleDown } from '@fortawesome/free-solid-svg-icons';
+class Break extends React.Component {
+ 
+  render(_props){
+    return (
+      <div id='break' className="col-sm-4">
+        <h2 id='break-label'>Break</h2>
+        <div className="row marge" >
+        <div id="break-increment" className="col-sm-4" >
+          <FontAwesomeIcon icon={faArrowCircleUp} className="arrow" onClick={this.props.increment} />
+        </div>
+        <div id="break-length" className="col-sm-4">{this.props.breakValue}</div>
+        <div id="break-decrement" className="col-sm-4">
+        <FontAwesomeIcon icon={ faArrowCircleDown } className="arrow" onClick={this.props.decrement} />
+        </div>
+      </div>
+    </div>);
+  }
+}
+
+export default Break;

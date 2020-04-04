@@ -1,0 +1,50 @@
+#break{
+    padding:10px;
+    color:#343a40;
+}
+
+#break-length{
+    font-size: 30px;
+    font-weight: bold;
+    padding:5px;
+}
+
+#break-length{
+    pointer-events: none;
+}
+
+.marge{
+    margin-top: 8vh;
+}
+
+.arrow{
+    font-size: 50px;
+}
+
+@media only screen and (max-width: 575px) {
+    #break{
+        padding:0;
+    }
+    .marge{
+        margin-top: 0px;
+        margin-bottom: 2px;
+    }
+
+    .arrow{
+        font-size: 50px;
+    }
+       
+    #break-increment{
+        margin-top: 12px;
+        width:33.33%;
+    }
+
+    #break-decrement{
+        margin-top: 12px;
+        width:33.33%;
+    }
+
+    #break-length{
+        width:33.33%;
+    }
+}

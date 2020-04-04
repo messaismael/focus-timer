@@ -1,0 +1,41 @@
+#counter{
+    padding-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    height: 50%;
+    color:#343a40; 
+}
+#label{
+    pointer-events: none;
+    font-size: 40px;
+}
+ .counter{
+    margin-left: 12.5%;
+    border:1px solid #343a40;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    color:#343a40;
+    
+ }
+
+ @media only screen and (max-width: 575px) {
+    #counter{
+        margin:0;
+        height: 25%;
+        border:1px solid black;
+        border-radius: 10px;
+        margin-left: 12.5%;
+        width: 75%;
+    }
+    #label{
+        font-size: 20px;
+    }
+    .counter{
+        margin-top: 0;
+        padding: 0;
+        margin-top:0px;
+        border: none;
+    }
+ }

@@ -29,7 +29,7 @@ app.on('ready', function(){
       label: 'About',
       click: () =>
            openAboutWindow({
-            icon_path: `${__dirname}/logo/logo3.png`,
+            icon_path: `${__dirname}/build/aboutIcon.png`,
             homepage: 'https://github.com/messaismael/Pomodoro-Clock',
             description: 'handle your work time',
             copyright: "Copyright © Focus Timer 2020",

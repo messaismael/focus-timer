@@ -1,0 +1,48 @@
+#display {   
+    border-radius: 10px;
+    padding: 0px 20px 5px 20px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #343a40;
+    color: white;
+}
+
+.play{
+    color:orange;
+    font-size: 30px;
+}
+.redo{
+    color:orange;
+    font-size: 30px;
+}
+
+#reset {
+    font-size: 20px;
+    text-align: center;
+}
+
+#start_stop {
+    font-size: 20px;
+    text-align: center;
+}
+
+#cont{
+    height: 40%;
+}
+
+@media only screen and (max-width: 575px) {
+    #cont{
+    /*border:1px solid violet;*/
+      height: 30%;
+    }
+    #contr {
+        display: flex;
+        justify-content: center;
+    }
+    #reset {
+        width: 15%;
+    }
+    #start_stop {
+        width: 15%;
+    }
+}
