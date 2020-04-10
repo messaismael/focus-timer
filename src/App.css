@@ -24,6 +24,18 @@ body{
   height: 60%;
 }
 
+.arrow:hover{
+  font-size: 55px;
+}
+
+#history{
+  position: absolute;
+  height: 200px;
+  top: 500px;
+  left: 100px;
+  background-color:gray
+}
+
 @media only screen and (max-width: 575px) {
   #nav{
     width: 100vw;

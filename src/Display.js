@@ -17,6 +17,7 @@ class Display extends React.Component{
             <div id="start_stop" className="col-sm-3" onClick={this.props.play}>
               <FontAwesomeIcon icon={this.props.active? faPauseCircle : faPlayCircle } className='play' />
             </div>
+            <div id='separate'></div>
             <div id='reset' className="col-sm-3 col-sm-offset-3" onClick={this.props.reset}>
               <FontAwesomeIcon  icon={faRedo} className='redo'/>
             </div>

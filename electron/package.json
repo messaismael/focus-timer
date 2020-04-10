@@ -4,7 +4,7 @@
   "description": "handle your work time",
   "main": "main.js",
   "scripts": {
-    "start": "cp -R ../dist ./ && electron .",
+    "start": "electron .",
     "electron-build:linux": "cp -R ../dist ./ && electron-builder build --linux",
     "electron-build:windows": "cp -R ../dist ./ && electron-builder build --windows",
     "electron-build:mac": "cp -R ../dist ./ && electron-builder build --mac"

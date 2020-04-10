@@ -1,5 +1,5 @@
 const { app, BrowserWindow, Menu } = require('electron')
-path =  require("path");
+var path =  require("path");
 const openAboutWindow = require('about-window').default;
 
 function createWindow () {
@@ -21,6 +21,7 @@ function createWindow () {
   })
   
 }
+
 app.on('ready', function(){
 
   createWindow();
@@ -56,14 +57,12 @@ app.on('ready', function(){
 });
 
 app.allowRendererProcessReuse = true
+
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
   }
 })
 
-app.on('activate', () => {
-  if (win === null) {
-    createWindow()
-  }
-})
+
+

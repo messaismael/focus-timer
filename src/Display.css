@@ -7,25 +7,42 @@
     color: white;
 }
 
+#contr{
+    height: 45px;
+}
 .play{
     color:orange;
-    font-size: 30px;
+    font-size: 35px;
+}
+.play:hover{
+    font-size: 40px;
 }
 .redo{
     color:orange;
     font-size: 30px;
 }
 
+.redo:hover{
+    font-size: 35px;
+}
+
 #reset {
-    font-size: 20px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #start_stop {
     font-size: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+#separate{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 #cont{
     height: 40%;
 }
