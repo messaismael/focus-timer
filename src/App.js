@@ -1,17 +1,21 @@
-/* eslint-disable no-unused-expressions */
 import React from 'react';
 import './App.css';
 import Session from './Session';
 import Display from './Display';
 import Counter from './Counter';
 import Break from './Break';
-import Navbar from './Navbar'
+import NavBar from './Navbar';
+import History from './History'
 import sound from './sound/BeepSound.mp3';
+
+const moment = require( "moment" );
 
 
 localStorage.setItem( 'history', JSON.stringify( [] ) );
-
 let history = JSON.parse( localStorage.getItem( 'history' ) );
+
+localStorage.setItem( 'start', 0 );
+var start = JSON.parse( localStorage.getItem( 'start' ) );
 
 function addZero( i ) {
   if ( i < 10 ) {
@@ -19,8 +23,6 @@ function addZero( i ) {
   }
   return i;
 }
-
-//let obj = [{a:'1'}, {a:'45'}, {a:'1285'}, {a:'148'}, {a:'1548'}];
 
 class App extends React.Component {
   constructor( props ) {
@@ -32,6 +34,7 @@ class App extends React.Component {
       active: true,
       mode: "Session",
       count: 0,
+      modalShow: false
     }
     this.handleReset = this.handleReset.bind( this );
     this.handlePlay = this.handlePlay.bind( this );
@@ -39,16 +42,18 @@ class App extends React.Component {
   componentDidUpdate( prevProps, prevState ) {
     if ( prevState.time === 0 && prevState.mode === "Break" ) {
 
-      history.push( {
-        type: 'break',
-        value: this.state.breakValue,
-        time: addZero( new Date().getHours() ) + ':' + addZero( new Date().getUTCMinutes() ),
+      history.unshift( {
+        type: 'Break',
+        value: moment( this.state.breakValue * 60000 ).format( "mm:ss" ),
+        start: history[0].end,
+        end: addZero( new Date().getHours() ) + ':' + addZero( new Date().getUTCMinutes() ),
       } )
       localStorage.setItem(
         'history',
         JSON.stringify(
           history
-        ) )
+        )
+      )
 
       this.audio.play();
       this.setState( {
@@ -57,11 +62,13 @@ class App extends React.Component {
       } )
     } else if ( prevState.time === 0 && prevState.mode === "Session" ) {
 
-      history.push( {
-        type: 'session',
-        value: this.state.sessionValue,
-        time: addZero( new Date().getHours() ) + ':' + addZero( new Date().getUTCMinutes() ),
+      history.unshift( {
+        type: 'Session',
+        value: moment( this.state.sessionValue * 60000 ).format( "mm:ss" ),
+        start: this.state.count === 0 ? start : history[0].end,
+        end: addZero( new Date().getHours() ) + ':' + addZero( new Date().getUTCMinutes() ),
       } )
+      console.log( history )
       localStorage.setItem(
         'history',
         JSON.stringify(
@@ -113,6 +120,20 @@ class App extends React.Component {
 
   // reset all in the original state  
   handleReset() {
+    //if ( this.state.count !== 0 ) {
+    history.unshift( {
+      type: this.state.mode,
+      value: this.state.mode === 'Break' ? moment( this.state.breakValue * 60000 - this.state.time ).format( "mm:ss" ) : moment( this.state.sessionValue * 60000 - this.state.time ).format( "mm:ss" ),
+      start: start,
+      end: addZero( new Date().getHours() ) + ':' + addZero( new Date().getUTCMinutes() ),
+    } )
+    localStorage.setItem(
+      'history',
+      JSON.stringify(
+        history
+      ) )
+    //}
+
     this.audio.pause();
     this.audio.currentTime = 0;
     this.setState( {
@@ -128,7 +149,17 @@ class App extends React.Component {
   }
 
   handlePlay() {
+
     if ( this.state.active ) {
+      if ( this.state.time === this.state.sessionValue * 60000 && this.state.count === 0 ) {
+        start = addZero( new Date().getHours() ) + ':' + addZero( new Date().getUTCMinutes() );
+        localStorage.setItem(
+          'start',
+          JSON.stringify(
+            start
+          )
+        )
+      }
       // decrement this.state.time after 1 second
       this.time = setInterval( () => { this.setState( { time: this.state.time - 1000 } ) }, 1000 );
       this.setState( { active: false, } )
@@ -147,7 +178,7 @@ class App extends React.Component {
     }
     return (
       <div className="container-fluid" id="all">
-        <Navbar />
+        <NavBar Show={ () => this.setState( { modalShow: true } ) } />
 
         <div id="pomodoro" className="d-flex justify-content-center d-flex align-items-center">
           <div className="container" id='cent'>
@@ -172,30 +203,18 @@ class App extends React.Component {
               reset={ this.handleReset }
               color={ col }
               active={ this.state.active } />
-
             <audio id='beep' src={ sound } ref={ i => this.audio = i } />
 
-            <div id="history">
-              {
-                history.map( function ( item ) {
-                  return (
-                    <div>
-                      <p>
-                        <span>{ item.type + ': ' + item.value + 'min ;' }</span>
-                        <span>End At{ ': ' + item.time + ' ' }</span>
-                      </p>
-                    </div>
-                  )
-                } )
-              }
+            <footer className="page-footer font-small blue">
+              <div className="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://github.com/messaismael/"> Ismael Dassi</a>
+              </div>
+            </footer>
+            <div>
+              <History history={ history } show={ this.state.modalShow } onHide={ () => this.setState( { modalShow: false } ) } />
             </div>
           </div>
         </div>
-        <footer className="page-footer font-small blue">
-          <div className="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="https://github.com/messaismael/"> Ismael Dassi</a>
-          </div>
-        </footer>
       </div>
     );
   }
