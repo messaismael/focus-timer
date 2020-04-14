@@ -28,15 +28,15 @@
     "node-sass": "^4.13.1"
   },
   "dependencies": {
-    "about-window": "^1.13.2"
+    "about-window": "^1.13.2",
+    "jquery": "^3.5.0",
+    "open": "^7.0.3"
   },
   "build": {
     "files": [
       "main.js",
       "dist/**/*",
-      "logo/**/*",
-      "sound/**/*",
-      "bootstrap-3.3.7-dist/**/*",
+      "build/**/*",
       "package.json",
       "embedded.provisionprofile",
       "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",

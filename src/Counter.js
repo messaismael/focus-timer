@@ -3,12 +3,12 @@ import './Counter.css'
 
 class Counter extends React.Component {
 
-  render(_props){
+  render( _props ) {
     return (
       <div className="col-sm-4 align-self-end" id="counter">
         <div id='label' >Counter</div>
-      <div className="w-75 p-3 counter">{this.props.count}</div>
-    </div>);
+        <div className="w-75 counter">{ this.props.count }</div>
+      </div> );
   }
 }
 

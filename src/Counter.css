@@ -12,7 +12,7 @@
 }
  .counter{
     margin-left: 12.5%;
-    border:1px solid #343a40;
+    border:5px solid #343a40;
     border-radius: 20px;
     font-weight: bold;
     font-size: 30px;
@@ -24,16 +24,15 @@
     #counter{
         margin:0;
         height: 25%;
-        border:1px solid black;
+        border:5px solid #343a40;
         border-radius: 10px;
         margin-left: 12.5%;
         width: 75%;
     }
     #label{
-        font-size: 20px;
+        font-size: 25px;
     }
     .counter{
-        margin-top: 0;
         padding: 0;
         margin-top:0px;
         border: none;

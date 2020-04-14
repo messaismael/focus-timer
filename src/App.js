@@ -171,7 +171,6 @@ class App extends React.Component {
   }
 
   render() {
-    //let historyArr = JSON.parse(localStorage.history);
     let col = 'white';
     if ( this.state.time < ( 60 * 1000 ) ) {
       col = 'red';

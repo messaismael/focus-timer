@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require( 'electron' )
+const { app, BrowserWindow, Menu, webContents, shell } = require( 'electron' )
 var path = require( "path" );
 const openAboutWindow = require( 'about-window' ).default;
 
@@ -14,13 +14,22 @@ function createWindow() {
     }
   } )
 
+  const handleRedirect = ( e, url ) => {
+    if ( url !== e.sender.getURL() ) {
+      e.preventDefault()
+      shell.openExternal( url )
+    }
+  }
+
+  win.webContents.on( 'will-navigate', handleRedirect )
+
   win.loadFile( path.join( 'dist', 'index.html' ) )
 
   win.on( 'closed', () => {
     win = null
   } )
-
 }
+
 
 app.on( 'ready', function () {
 
@@ -30,7 +39,7 @@ app.on( 'ready', function () {
       label: 'About',
       click: () =>
         openAboutWindow( {
-          icon_path: `${__dirname}/build/icon.png`,
+          icon_path: `${__dirname}/build/abouticon.png`,
           homepage: 'https://github.com/messaismael/Pomodoro-Clock',
           description: 'handle your work time',
           copyright: "Copyright © Focus Timer 2020",
@@ -43,6 +52,7 @@ app.on( 'ready', function () {
           show_close_button: 'Close',
         } ),
     },
+    /** 
     {
       label: 'Dev Tools',
       click() {
@@ -51,6 +61,7 @@ app.on( 'ready', function () {
         if ( currentW ) currentW.webContents.openDevTools();
       }
     }
+    */
   ]
   const menu = Menu.buildFromTemplate( template );
   app.applicationMenu = menu;

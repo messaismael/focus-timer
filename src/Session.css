@@ -30,14 +30,23 @@
     }
 
     #session-increment{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 55px;
         margin-top: 12px;
         width:33.33%;
     }
     #session-decrement{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 55px;
         margin-top: 12px;
         width:33.33%;
     }
     #session-length{
+        margin-top: 12px;
         width:33.33%;
     }
     
