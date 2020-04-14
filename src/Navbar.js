@@ -26,7 +26,7 @@ class NavBar extends React.Component {
             <div>
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                     <Navbar.Brand href="#home">
-                        <a href="#home" className="navbar-brand d-inline-block align-top" >
+                        <a href="#home" className="navbar-brand d-inline-block align-top" id="link">
                             <img src={ logo4 } width="50" height="50" alt="pomdoro" />{ '  ' } Focus Timer
                         </a>
                     </Navbar.Brand>

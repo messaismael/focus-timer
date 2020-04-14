@@ -14,7 +14,9 @@
 #contr{
     height: 45px;
 }
-
+#timer-label{
+    pointer-events: none;
+}
 .play{
     color:orange;
     font-size: 35px;
@@ -44,11 +46,6 @@
     justify-content: center;
     align-items: center;
 }
-#separate{
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
 
 @media only screen and (max-height: 700px) {
     #cont{

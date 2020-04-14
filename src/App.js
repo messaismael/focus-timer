@@ -120,19 +120,19 @@ class App extends React.Component {
 
   // reset all in the original state  
   handleReset() {
-    //if ( this.state.count !== 0 ) {
-    history.unshift( {
-      type: this.state.mode,
-      value: this.state.mode === 'Break' ? moment( this.state.breakValue * 60000 - this.state.time ).format( "mm:ss" ) : moment( this.state.sessionValue * 60000 - this.state.time ).format( "mm:ss" ),
-      start: start,
-      end: addZero( new Date().getHours() ) + ':' + addZero( new Date().getUTCMinutes() ),
-    } )
-    localStorage.setItem(
-      'history',
-      JSON.stringify(
-        history
-      ) )
-    //}
+    if ( this.state.time !== this.state.sessionValue * 60000 ) {
+      history.unshift( {
+        type: this.state.mode,
+        value: this.state.mode === 'Break' ? moment( this.state.breakValue * 60000 - this.state.time ).format( "mm:ss" ) : moment( this.state.sessionValue * 60000 - this.state.time ).format( "mm:ss" ),
+        start: start,
+        end: addZero( new Date().getHours() ) + ':' + addZero( new Date().getUTCMinutes() ),
+      } )
+      localStorage.setItem(
+        'history',
+        JSON.stringify(
+          history
+        ) )
+    }
 
     this.audio.pause();
     this.audio.currentTime = 0;
