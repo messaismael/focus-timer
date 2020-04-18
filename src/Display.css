@@ -1,35 +1,40 @@
-#cont{
+#cont {
     height: 50%;
 }
 
-#display {   
+#display {
     border-radius: 10px;
     padding: 0px 20px 5px 20px;
     font-size: 30px;
     font-weight: bold;
     background-color: #343a40;
     color: white;
+    width: 80%;
 }
 
-#contr{
+#contr {
     height: 45px;
 }
-#timer-label{
+
+#timer-label {
     pointer-events: none;
 }
-.play{
-    color:orange;
+
+.play {
+    color: orange;
     font-size: 35px;
 }
-.play:hover{
+
+.play:hover {
     font-size: 40px;
 }
-.redo{
-    color:orange;
+
+.redo {
+    color: orange;
     font-size: 30px;
 }
 
-.redo:hover{
+.redo:hover {
     font-size: 35px;
 }
 
@@ -48,21 +53,25 @@
 }
 
 @media only screen and (max-height: 700px) {
-    #cont{
-    height: 28%;
+    #cont {
+        margin-top: 15px;
     }
 }
+
 @media only screen and (max-width: 575px) {
-    #cont{
-    height: 23%;
+    #cont {
+        height: 36%;
     }
+
     #contr {
         display: flex;
         justify-content: center;
     }
+
     #reset {
         width: 15%;
     }
+
     #start_stop {
         width: 15%;
     }

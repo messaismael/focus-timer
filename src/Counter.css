@@ -1,19 +1,15 @@
 #counter{
-    padding-top: 10px;
+    padding-top: 0%;
     text-align: center;
     font-weight: bold;
-    font-size: 20px;
-    height: 50%;
+    font-size: 25px;
     color:#343a40; 
 }
 #label{
     pointer-events: none;
-    font-size: 40px;
 }
  .counter{
     margin-left: 12.5%;
-    border:5px solid #343a40;
-    border-radius: 20px;
     font-weight: bold;
     font-size: 30px;
     color:#343a40;
@@ -22,19 +18,19 @@
 
  @media only screen and (max-width: 575px) {
     #counter{
-        margin:0;
-        height: 25%;
+        margin-top:10px;
+        height: 20%;
+        
         border:5px solid #343a40;
         border-radius: 10px;
-        margin-left: 12.5%;
-        width: 75%;
+        margin-left: 25%;
+        width: 50%;
     }
     #label{
         font-size: 25px;
     }
     .counter{
         padding: 0;
-        margin-top:0px;
         border: none;
     }
  }

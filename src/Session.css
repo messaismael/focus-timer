@@ -1,32 +1,29 @@
 #session{
-    padding: 10px;
     color:#343a40;
+    width:50%;
+    height: 100px;
 }
 
 #session-length{
     font-size: 30px;
     font-weight: bold;
-    padding: 5px;
 }
 #session-length{
     pointer-events: none;
 }
 
 .arrow{
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .marge{
-    margin-top: 8vh;
+    margin-top: 0.5vh;
 }
 
 @media only screen and (max-width: 575px) {
-    .marge{
-        margin-top: 0px;
-    }   
 
     .arrow{
-        font-size: 35px;
+        font-size: 40px;
     }
 
     #session-increment{
@@ -34,7 +31,7 @@
         justify-content: center;
         align-items: center;
         height: 55px;
-        margin-top: 12px;
+        margin-top: 5px;
         width:33.33%;
     }
     #session-decrement{
@@ -42,7 +39,7 @@
         justify-content: center;
         align-items: center;
         height: 55px;
-        margin-top: 12px;
+        margin-top: 5px;
         width:33.33%;
     }
     #session-length{

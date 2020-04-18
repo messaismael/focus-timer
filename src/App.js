@@ -186,15 +186,14 @@ class App extends React.Component {
                 increment={ this.handleIncrement.bind( this, "Break" ) }
                 decrement={ this.handleDecrement.bind( this, "Break" ) }
                 breakValue={ this.state.breakValue } />
-
-              <Counter count={ this.state.count } />
-
               <Session
                 increment={ this.handleIncrement.bind( this, "Session" ) }
                 decrement={ this.handleDecrement.bind( this, "Session" ) }
                 sessionValue={ this.state.sessionValue } />
             </div>
-
+            <div className="row">
+              <Counter count={ this.state.count } />
+            </div>
             <Display
               time={ this.state.time }
               mode={ this.state.mode }

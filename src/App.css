@@ -2,6 +2,8 @@ body {
   padding: 0;
   background-color: orange;
   overflow-y: hidden;
+  width: 380px;
+  height: 550px;
 }
 #link{
   padding:0;
@@ -30,9 +32,6 @@ body {
 }
 /*customize scroll bar*/
 
-
-
-
 #pomodoro {
   padding: 0;
   text-align: center;
@@ -44,11 +43,11 @@ body {
 }
 
 #control {
-  height: 60%;
+  height: 25%;
 }
 
 .arrow:hover {
-  font-size: 55px;
+  font-size: 40px;
 }
 
 #history {
@@ -63,12 +62,12 @@ body {
 
 @media only screen and (max-width: 575px) {
   #nav {
-    width: 100vw;
+    height: 200px;
   }
 
   #control {
-    height: 60%;
-    margin-top: 50px;
+    margin-top: 10px;
+    height: 25%;
   }
 
   #cent {
@@ -77,19 +76,16 @@ body {
 }
 
 @media only screen and (max-height:700px) {
+  
   #all {
     height: 100vh;
   }
 
   #pomodoro {
-    height: 700px;
+    height: 471px;
   }
 
   #cent {
-    height: 650px;
-  }
-
-  #control {
-    margin-top: 50px;
+    height: 470px;
   }
 }
