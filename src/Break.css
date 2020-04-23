@@ -1,21 +1,23 @@
 #break{
-    padding:10px;
     color:#343a40;
 }
 
-#break-length{
+#break-length {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color:  #343a40;
+    border-radius: 15px;
+    color:orange;
     font-size: 30px;
     font-weight: bold;
     padding:5px;
+    text-align: center;
 }
 
-#break-length{
-    pointer-events: none;
-}
-
-.marge{
-    margin-top: 8vh;
-}
 
 .arrow{
     font-size: 50px;

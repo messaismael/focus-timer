@@ -1,6 +1,6 @@
 {
   "name": "FocusTimer",
-  "version": "1.2.1",
+  "version": "1.4.1",
   "description": "handle your work time",
   "private": true,
   "homepage": ".",
@@ -23,6 +23,7 @@
     "popper.js": "^1.16.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
+    "react-circular-progressbar": "^2.0.3",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "serve-favicon": "^2.5.0"

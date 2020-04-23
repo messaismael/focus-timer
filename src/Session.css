@@ -1,54 +1,61 @@
-#session{
-    padding: 10px;
-    color:#343a40;
+#session {
+    color: #343a40;
 }
 
-#session-length{
+#session-length {
     font-size: 30px;
     font-weight: bold;
     padding: 5px;
 }
-#session-length{
-    pointer-events: none;
+
+#session-length {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color:  #343a40;
+    border-radius: 15px;
+    color:orange;
+    text-align: center;
 }
 
-.arrow{
+.arrow {
     font-size: 50px;
 }
 
-.marge{
-    margin-top: 8vh;
-}
-
 @media only screen and (max-width: 575px) {
-    .marge{
+    .marge {
         margin-top: 0px;
-    }   
+    }
 
-    .arrow{
+    .arrow {
         font-size: 35px;
     }
 
-    #session-increment{
+    #session-increment {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 55px;
         margin-top: 12px;
-        width:33.33%;
+        width: 33.33%;
     }
-    #session-decrement{
+
+    #session-decrement {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 55px;
         margin-top: 12px;
-        width:33.33%;
+        width: 33.33%;
     }
-    #session-length{
+
+    #session-length {
         margin-top: 12px;
-        width:33.33%;
+        width: 33.33%;
     }
-    
+
 
 }

@@ -1,14 +1,13 @@
 body {
   padding: 0;
   background-color: orange;
-  overflow-y: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 #link{
   padding:0;
 }
 #all {
-  overflow-y: auto;
-  overflow-x: hidden;
   padding: 0;
   background-color: orange;
   height: 100vh;
@@ -30,21 +29,20 @@ body {
 }
 /*customize scroll bar*/
 
-
-
-
 #pomodoro {
-  padding: 0;
   text-align: center;
-  height: 89.5vh;
+  overflow-y: auto;
+  padding: 0;
+  
 }
 
-#cent {
-  height: 70%;
+#cent{
+  height:85.5%;
+  text-align: center;
 }
 
 #control {
-  height: 60%;
+  margin:auto;
 }
 
 .arrow:hover {
@@ -61,6 +59,14 @@ body {
   overflow-x: hidden;
 }
 
+/* input focus */
+
+input:focus {
+  outline-color : #343a40 !important;
+}
+
+/* input focus */
+
 @media only screen and (max-width: 575px) {
   #nav {
     width: 100vw;
@@ -68,7 +74,7 @@ body {
 
   #control {
     height: 60%;
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
   #cent {
@@ -82,14 +88,14 @@ body {
   }
 
   #pomodoro {
-    height: 700px;
+    height: 603px;
   }
 
   #cent {
-    height: 650px;
+    height: 560px;
   }
 
   #control {
-    margin-top: 50px;
+    margin-top: 0px;
   }
 }

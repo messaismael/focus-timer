@@ -1,36 +1,41 @@
 #cont{
-    height: 50%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-#display {   
-    border-radius: 10px;
-    padding: 0px 20px 5px 20px;
+strong{
     font-size: 30px;
-    font-weight: bold;
-    background-color: #343a40;
-    color: white;
 }
 
-#contr{
-    height: 45px;
+.svg{
+    height:300px
 }
+
 #timer-label{
-    pointer-events: none;
+    font-weight: 900;
+    font-size: 30px;
+}
+#contr{
+    height: 20%;
 }
 .play{
-    color:orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 35px;
 }
 .play:hover{
     font-size: 40px;
 }
 .redo{
-    color:orange;
-    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
 }
 
 .redo:hover{
-    font-size: 35px;
+    font-size: 40px;
 }
 
 #reset {
@@ -49,12 +54,14 @@
 
 @media only screen and (max-height: 700px) {
     #cont{
+    border:5px solid pink;
     height: 28%;
     }
 }
 @media only screen and (max-width: 575px) {
     #cont{
-    height: 23%;
+        border:5px solid pink;
+        height: 23%;
     }
     #contr {
         display: flex;
