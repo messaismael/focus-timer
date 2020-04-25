@@ -215,7 +215,7 @@ class App extends React.Component {
                 decrement={ this.handleDecrement.bind( this, "Session" ) }
                 sessionValue={ this.state.sessionValue } />
             </div>
-            <div id='displai' className=''>
+            <div id='display' className=''>
               <Display
                 pour={ this.state.mode === 'Session' ? this.state.sessionValue * 60 : this.state.breakValue * 60 }
                 time={ this.state.time }

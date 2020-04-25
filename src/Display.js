@@ -34,13 +34,13 @@ class Display extends React.Component {
 
           <div id="timer-label" >{ this.props.mode }</div>
           <div>
-            <strong>{ moment( this.props.time * 1000 ).format( "mm:ss" ) } </strong>
+            <strong style={ { 'color': `${( parseInt( this.props.time / 60 ) ) ? this.color : "red"}` } }>{ moment( this.props.time * 1000 ).format( "mm:ss" ) } </strong>
           </div>
           <div className='row' id='contr'>
-            <div id="start_stop" className="col-sm-4 offset-1" onClick={ this.props.play }>
+            <div id="start_stop" className="" onClick={ this.props.play }>
               <FontAwesomeIcon icon={ this.props.active ? faPlayCircle : faPauseCircle } className='play' />
             </div>
-            <div id='reset' className="col-sm-4 offset-2" onClick={ this.props.reset }>
+            <div id='reset' className="" onClick={ this.props.reset }>
               <FontAwesomeIcon icon={ faRedo } className='redo' />
             </div>
           </div>

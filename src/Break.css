@@ -28,34 +28,47 @@
         padding:0;
     }
     .marge{
+        display: flex;
+        align-items: center;
         margin-top: 0px;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
     }
 
     .arrow{
         font-size: 50px;
     }
-       
-    #break-increment{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 55px;
-        margin-top: 12px;
-        width:33.33%;
-    }
 
-    #break-decrement{
+    #break-decrement, #break-increment {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 55px;
-        margin-top: 12px;
         width:33.33%;
     }
 
     #break-length{
-        margin-top: 12px;
         width:33.33%;
+    }
+}
+
+
+@media only screen and (max-height:569px) {
+    h2{
+        margin-bottom: 0;
+        font-size: 25px;
+    }
+    #break{
+        height: 50%;
+    }
+    #break-length {
+        margin-top: 0;
+        height: 100%
+    }
+    #break-increment, #break-decrement{
+        height: 100%;
+
+    }
+    .arrow{
+        font-size: 45px;
     }
 }

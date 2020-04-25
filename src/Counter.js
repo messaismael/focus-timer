@@ -7,7 +7,7 @@ class Counter extends React.Component {
     return (
       <div className="col-sm-4 align-self-end" id="counter">
         <div id='label' >Counter</div>
-        <div className="w-75 counter">{ this.props.count }</div>
+        <div className="counter">{ this.props.count }</div>
       </div> );
   }
 }

@@ -7,7 +7,7 @@ class Session extends React.Component {
 
   render( _props ) {
     return (
-      <div id='session' className="col-sm-4 offset-4">
+      <div id='session' className="col-sm-4 offset-sm-2">
         <h2 id='session-label'>Session</h2>
         <div className='row marge'>
           <div id='session-increment' className="col-sm-4">

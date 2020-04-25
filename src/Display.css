@@ -1,76 +1,106 @@
-#cont{
-    display:flex;
+#cont {
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
-strong{
+
+strong {
     font-size: 30px;
 }
 
-.svg{
-    height:300px
+.svg {
+    min-height: 150px;
+    height: 300px
 }
 
-#timer-label{
+#timer-label {
     font-weight: 900;
     font-size: 30px;
+    color:  #343a40;
 }
-#contr{
+
+#contr {
     height: 20%;
 }
-.play{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 35px;
-}
-.play:hover{
-    font-size: 40px;
-}
-.redo{
+
+.play {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 35px;
 }
 
-.redo:hover{
+.play:hover {
     font-size: 40px;
-}
-
-#reset {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #start_stop {
-    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 55px;
+    color:  #343a40;
 }
 
-@media only screen and (max-height: 700px) {
-    #cont{
-    border:5px solid pink;
-    height: 28%;
+.redo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 33px;
+}
+
+.redo:hover {
+    font-size: 38px;
+}
+
+#reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    color:  #343a40;
+}
+
+
+@media only screen and (max-height: 569px) {
+    #cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid green;
+        height: 40%;
+
+    }
+
+    .svg {
+        height: 180px;
+        border: 1px solid white;
+    }
+    #timer-label {
+        margin-top: 70%;
+    }
+
+    .redo{
+        font-size: 20px;
+    }
+    .play,
+    strong,
+    #timer-label {
+        font-size: 25px;
     }
 }
+
 @media only screen and (max-width: 575px) {
-    #cont{
-        border:5px solid pink;
-        height: 23%;
+    #cont {
+        height: 100%;
     }
-    #contr {
-        display: flex;
-        justify-content: center;
-    }
+
     #reset {
-        width: 15%;
+        border:1px solid red;
+        width:40px;
     }
+
     #start_stop {
-        width: 15%;
+        width: 40px;
     }
 }

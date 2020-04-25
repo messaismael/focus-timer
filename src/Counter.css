@@ -1,17 +1,16 @@
 #counter{
-    margin:auto;
-    padding-top: 10px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    height: 50%;
-    color:#343a40;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; 
+    margin:auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    height: 50%;
+    color:#343a40;
 }
 #label{
     font-size: 40px;
@@ -23,13 +22,11 @@
     font-weight: bold;
     font-size: 30px;
     color:#343a40;
-    
  }
 
  @media only screen and (max-width: 575px) {
     #counter{
         margin:0;
-        height: 25%;
         border:5px solid #343a40;
         border-radius: 10px;
         margin-left: 12.5%;

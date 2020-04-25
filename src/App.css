@@ -32,6 +32,7 @@ body {
 #pomodoro {
   text-align: center;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 0;
   
 }
@@ -74,28 +75,30 @@ input:focus {
 
   #control {
     height: 60%;
-    margin-top: 20px;
   }
 
-  #cent {
-    height: 85vh;
-  }
 }
 
-@media only screen and (max-height:700px) {
-  #all {
-    height: 100vh;
-  }
+@media only screen and (max-height:568px) {
+
 
   #pomodoro {
-    height: 603px;
+    height: 100%;
   }
 
   #cent {
-    height: 560px;
+    height: 76.5%;
+    overflow-y: auto;
   }
 
   #control {
-    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    height: 40%;
   }
+  #display{
+    height: 50%;
+    border:1px solid black;
+  }
+
 }

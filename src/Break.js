@@ -6,7 +6,7 @@ class Break extends React.Component {
 
   render( _props ) {
     return (
-      <div id='break' className="col-sm-4">
+      <div id='break' className="col-sm-4 offset-sm-1">
         <h2 id='break-label'>Break</h2>
         <div className="row marge" >
           <div id="break-increment" className="col-sm-4" >
