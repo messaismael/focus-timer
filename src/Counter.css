@@ -9,28 +9,26 @@
     text-align: center;
     font-weight: bold;
     font-size: 20px;
-    height: 50%;
     color:#343a40;
+    margin-top: 10px;
+    border:1px solid #343a40;
+    border-radius: 10px;
+    width: 40%;
 }
 #label{
-    font-size: 40px;
+    font-size: 30px;
 }
  .counter{
-    margin-left: 12.5%;
-    border:5px solid #343a40;
     border-radius: 20px;
-    font-weight: bold;
     font-size: 30px;
     color:#343a40;
  }
 
- @media only screen and (max-width: 575px) {
+ @media only screen and (max-width: 768px) {
     #counter{
-        margin:0;
-        border:5px solid #343a40;
-        border-radius: 10px;
-        margin-left: 12.5%;
         width: 75%;
+        margin:auto;
+        margin-top: 10px;
     }
     #label{
         font-size: 25px;

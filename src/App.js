@@ -225,9 +225,9 @@ class App extends React.Component {
                 color={ col }
                 active={ this.state.active }
               />
-            </div>
-            <div className=''>
-              <Counter count={ this.state.count } />
+              <div className=''>
+                <Counter count={ this.state.count } />
+              </div>
             </div>
             <audio id='beep' src={ sound } ref={ i => this.audio = i } />
             <div>

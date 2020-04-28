@@ -23,7 +23,7 @@
     font-size: 50px;
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 769px) {
     #break{
         padding:0;
     }
@@ -52,7 +52,7 @@
 }
 
 
-@media only screen and (max-height:569px) {
+@media only screen and (max-height:800px) {
     h2{
         margin-bottom: 0;
         font-size: 25px;

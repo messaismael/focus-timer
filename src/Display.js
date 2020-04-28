@@ -15,7 +15,7 @@ class Display extends React.Component {
 
   render( _props ) {
     return (
-      <div id='cont' className="col-sm-6 offset-sm-3">
+      <div id='cont' className="col-sm-6 offset-sm-3  ">
 
         <CircularProgressbarWithChildren
           value={ this.props.time * 100 / this.props.pour }
