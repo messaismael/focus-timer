@@ -69,7 +69,7 @@ input:focus {
 
 /* input focus */
 /*
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: px) {
   #nav {
     width: 100vw;
   }
@@ -80,19 +80,34 @@ input:focus {
 
 }*/
 
-@media only screen and (max-height:700px) {
+@media only screen and (max-height:750px) {
+  #all{
+    overflow-x: hidden;
+  }
+  body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
   #cent {
-    height: 580px;
+    overflow-y: auto;
+    height: 80%;
+    min-height: 550px ;
+
     overflow-y: auto;
     padding: 0;
   }
+
   #pomodoro {
+    overflow-y: auto;
     height: 100%;
   }
+
   #control {
     display: flex;
     align-items: center;
     height: 40%;
+    margin-top: 10px;
   }
 
 }
