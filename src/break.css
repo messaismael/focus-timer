@@ -1,7 +1,8 @@
-#session {
-    color: #343a40;
+#break{
+    color:#343a40;
 }
-#session-length {
+
+#break-length {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -10,6 +11,7 @@
     user-select: none;
     background-color:  #343a40;
     border-radius: 15px;
+    border:  #343a40;
     color:orange;
     font-size: 30px;
     font-weight: bold;
@@ -17,46 +19,55 @@
     text-align: center;
 }
 
-.arrow {
+
+.arrow{
     font-size: 50px;
 }
 
-
 @media only screen and (max-width: 769px) {
-
-    .arrow {
-        font-size: 35px;
+    #break{
+        padding:0;
+    }
+    .marge{
+        display: flex;
+        align-items: center;
+        margin-top: 0px;
+        margin-bottom: 5px;
     }
 
-    #session-decrement, #session-increment {
+    .arrow{
+        font-size: 50px;
+    }
+
+    #break-decrement, #break-increment {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 55px;
-        width: 33.33%;
+        width:33.33%;
     }
 
-    #session-length {
-        width: 33.33%;
+    #break-length{
+        width:33.33%;
     }
-
 }
+
 
 @media only screen and (max-height:800px) {
     h2{
         margin-bottom: 0;
         font-size: 25px;
     }
-    #session{
+    #break{
         height: 50%;
-        width: 100%;
     }
-    #session-length {
+    #break-length {
         margin-top: 0;
         height: 100%
     }
-    #session-increment, #session-decrement{
+    #break-increment, #break-decrement{
         height: 100%;
+
     }
     .arrow{
         font-size: 45px;

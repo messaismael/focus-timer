@@ -1,12 +1,20 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
 import './App.css';
-import Session from './Session';
-import Display from './Display';
-import Counter from './Counter';
-import Break from './Break';
-import NavBar from './Navbar';
-import History from './History'
+import Session from './session';
+import Display from './display';
+import Counter from './counter';
+import Break from './break';
+import NavBar from './navbar';
+import History from './history'
 import sound from './sound/BeepSound.mp3';
+import Register from './register';
+import Login from './login.js'
 //import { faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
 
 const moment = require( "moment" );
@@ -84,6 +92,7 @@ class App extends React.Component {
       } )
     }
   }
+
   handleInput( mode, event ) {
     const re = /^[0-9\b]+$/;
     if ( event.target.value === '' || re.test( event.target.value ) )
@@ -198,48 +207,61 @@ class App extends React.Component {
     }
     return (
       <div className="container-fluid" id="all">
-        <NavBar Show={ () => this.setState( { modalShow: true } ) } />
-        <div id='cent' className='d-flex align-items-center'>
-          <div id="pomodoro" className="container">
+        <Router>
+          <NavBar Show={ () => this.setState( { modalShow: true } ) } />
+          <Switch>
+            <Route exact path="/">
+              <div id='cent' className='d-flex align-items-center'>
+                <div id="pomodoro" className="container">
 
-            <div id='control' className="row">
-              <Break
-                Input={ ( event ) => this.handleInput( 'Break', event ) }
-                increment={ this.handleIncrement.bind( this, "Break" ) }
-                decrement={ this.handleDecrement.bind( this, "Break" ) }
-                breakValue={ this.state.breakValue } />
+                  <div id='control' className="row">
+                    <Break
+                      Input={ ( event ) => this.handleInput( 'Break', event ) }
+                      increment={ this.handleIncrement.bind( this, "Break" ) }
+                      decrement={ this.handleDecrement.bind( this, "Break" ) }
+                      breakValue={ this.state.breakValue } />
 
-              <Session
-                Input={ ( event ) => this.handleInput( 'Session', event ) }
-                increment={ this.handleIncrement.bind( this, "Session" ) }
-                decrement={ this.handleDecrement.bind( this, "Session" ) }
-                sessionValue={ this.state.sessionValue } />
-            </div>
-            <div id='display' className=''>
-              <Display
-                pour={ this.state.mode === 'Session' ? this.state.sessionValue * 60 : this.state.breakValue * 60 }
-                time={ this.state.time }
-                mode={ this.state.mode }
-                play={ this.handlePlay }
-                reset={ this.handleReset }
-                color={ col }
-                active={ this.state.active }
-              />
-              <div className=''>
-                <Counter count={ this.state.count } />
+                    <Session
+                      Input={ ( event ) => this.handleInput( 'Session', event ) }
+                      increment={ this.handleIncrement.bind( this, "Session" ) }
+                      decrement={ this.handleDecrement.bind( this, "Session" ) }
+                      sessionValue={ this.state.sessionValue } />
+                  </div>
+                  <div id='display' className=''>
+                    <Display
+                      pour={ this.state.mode === 'Session' ? this.state.sessionValue * 60 : this.state.breakValue * 60 }
+                      time={ this.state.time }
+                      mode={ this.state.mode }
+                      play={ this.handlePlay }
+                      reset={ this.handleReset }
+                      color={ col }
+                      active={ this.state.active }
+                    />
+                    <div className=''>
+                      <Counter count={ this.state.count } />
+                    </div>
+                  </div>
+                  <audio id='beep' src={ sound } ref={ i => this.audio = i } />
+                  <div>
+                    <History history={ history } show={ this.state.modalShow } onHide={ () => this.setState( { modalShow: false } ) } />
+                  </div>
+                </div>
               </div>
-            </div>
-            <audio id='beep' src={ sound } ref={ i => this.audio = i } />
-            <div>
-              <History history={ history } show={ this.state.modalShow } onHide={ () => this.setState( { modalShow: false } ) } />
-            </div>
-          </div>
-        </div>
-        <footer className="page-footer font-small blue">
-          <div className="footer-copyright text-center py-3">© 2020 Copyright:
+            </Route>
+          </Switch>
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+
+          <footer className="page-footer font-small blue">
+            <div className="footer-copyright text-center py-3">© 2020 Copyright:
             <a href="https://github.com/messaismael/"> Ismael Dassi</a>
-          </div>
-        </footer>
+            </div>
+          </footer>
+        </Router>
       </div>
     );
   }

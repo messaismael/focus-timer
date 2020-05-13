@@ -1,5 +1,5 @@
 import React from 'react';
-import './Display.css';
+import './display.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRedo, faPauseCircle, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';

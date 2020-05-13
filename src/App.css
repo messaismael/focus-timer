@@ -64,7 +64,7 @@ body {
 /* input focus */
 
 input:focus {
-  outline-color : #343a40 !important;
+  outline-color : orange !important;
 }
 
 /* input focus */

@@ -1,5 +1,5 @@
 import React from 'react'
-import './History.css'
+import './history.css'
 import { Modal, Button, Table, Form, FormControl } from 'react-bootstrap'
 
 function History( props ) {

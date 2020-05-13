@@ -1,25 +1,26 @@
 import React from 'react';
-import './Break.css'
+import './session.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleUp, faArrowCircleDown } from '@fortawesome/free-solid-svg-icons';
-class Break extends React.Component {
+
+class Session extends React.Component {
 
   render( _props ) {
     return (
-      <div id='break' className="col-sm-4 offset-sm-1">
-        <h2 id='break-label'>Break</h2>
-        <div className="row marge" >
-          <div id="break-increment" className="col-sm-4" >
+      <div id='session' className="col-sm-4 offset-sm-2">
+        <h2 id='session-label'>Session</h2>
+        <div className='row marge'>
+          <div id='session-increment' className="col-sm-4">
             <FontAwesomeIcon icon={ faArrowCircleUp } className="arrow" onClick={ this.props.increment } />
           </div>
           <input
-            id='break-length'
+            id='session-length'
             className="col-sm-4"
-            value={ this.props.breakValue }
+            value={ this.props.sessionValue }
             onChange={ this.props.Input }
             maxlength="2"
           />
-          <div id="break-decrement" className="col-sm-4">
+          <div id='session-decrement' className="col-sm-4">
             <FontAwesomeIcon icon={ faArrowCircleDown } className="arrow" onClick={ this.props.decrement } />
           </div>
         </div>
@@ -27,4 +28,4 @@ class Break extends React.Component {
   }
 }
 
-export default Break;
+export default Session;

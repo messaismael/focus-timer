@@ -1,8 +1,7 @@
-#break{
-    color:#343a40;
+#session {
+    color: #343a40;
 }
-
-#break-length {
+#session-length {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -11,6 +10,7 @@
     user-select: none;
     background-color:  #343a40;
     border-radius: 15px;
+    border:  #343a40;
     color:orange;
     font-size: 30px;
     font-weight: bold;
@@ -18,55 +18,46 @@
     text-align: center;
 }
 
-
-.arrow{
+.arrow {
     font-size: 50px;
 }
 
+
 @media only screen and (max-width: 769px) {
-    #break{
-        padding:0;
-    }
-    .marge{
-        display: flex;
-        align-items: center;
-        margin-top: 0px;
-        margin-bottom: 5px;
+
+    .arrow {
+        font-size: 35px;
     }
 
-    .arrow{
-        font-size: 50px;
-    }
-
-    #break-decrement, #break-increment {
+    #session-decrement, #session-increment {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 55px;
-        width:33.33%;
+        width: 33.33%;
     }
 
-    #break-length{
-        width:33.33%;
+    #session-length {
+        width: 33.33%;
     }
+
 }
-
 
 @media only screen and (max-height:800px) {
     h2{
         margin-bottom: 0;
         font-size: 25px;
     }
-    #break{
+    #session{
         height: 50%;
+        width: 100%;
     }
-    #break-length {
+    #session-length {
         margin-top: 0;
         height: 100%
     }
-    #break-increment, #break-decrement{
+    #session-increment, #session-decrement{
         height: 100%;
-
     }
     .arrow{
         font-size: 45px;

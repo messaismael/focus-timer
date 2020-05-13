@@ -1,0 +1,15 @@
+h2{
+    text-align:center;
+}
+#centa{
+    display: flex;
+    align-items: center;
+    border:1px solid none;
+    height: 84%;
+}
+
+#register{
+    margin: auto;
+    background-color:#ced4da;
+    border-radius: 5px;
+}
