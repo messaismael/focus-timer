@@ -28,10 +28,8 @@ class NavBar extends React.Component {
         return (
             <div>
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                    <Navbar.Brand href="#home">
-                        <Nav.Link href="/" className="navbar-brand d-inline-block align-top" id="link">
+                    <Navbar.Brand href="/">
                             <img src={ logo4 } width="50" height="50" alt="pomdoro" />{ '  ' } Focus Timer
-                        </Nav.Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">

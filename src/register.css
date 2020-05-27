@@ -10,6 +10,7 @@ h2{
 
 #register{
     margin: auto;
-    background-color:#ced4da;
+    background-color:rgba(206, 212, 218, 0.363);
     border-radius: 5px;
+    padding:20px;
 }
