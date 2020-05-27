@@ -18,6 +18,7 @@ class Break extends React.Component {
             value={ this.props.breakValue }
             onChange={ this.props.Input }
             maxLength="2"
+            disabled={this.props.active? false:true}
           />
           <div id="break-decrement" className="col-sm-4">
             <FontAwesomeIcon icon={ faArrowCircleDown } className="arrow" onClick={ this.props.decrement } />

@@ -19,6 +19,7 @@ class Session extends React.Component {
             value={ this.props.sessionValue }
             onChange={ this.props.Input }
             maxLength="2"
+            disabled={this.props.active? false:true}
           />
           <div id='session-decrement' className="col-sm-4">
             <FontAwesomeIcon icon={ faArrowCircleDown } className="arrow" onClick={ this.props.decrement } />

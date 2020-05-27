@@ -21,7 +21,7 @@ function Label( props ) {
 
 class NavBar extends React.Component {
     componentDidUpdate() {
-        Label()
+        Label(user)
     }
 
     render() {
