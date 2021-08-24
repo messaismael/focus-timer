@@ -1,0 +1,41 @@
+#counter{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    margin:auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color:#343a40;
+    margin-top: 10px;
+    border:1px solid #343a40;
+    border-radius: 10px;
+    width: 40%;
+}
+#label{
+    font-size: 30px;
+}
+ .counter{
+    border-radius: 20px;
+    font-size: 30px;
+    color:#343a40;
+ }
+
+ @media only screen and (max-width: 768px) {
+    #counter{
+        width: 75%;
+        margin:auto;
+        margin-top: 30px;
+    }
+    #label{
+        font-size: 25px;
+    }
+    .counter{
+        padding: 0;
+        margin-top:0px;
+        border: none;
+    }
+ }
