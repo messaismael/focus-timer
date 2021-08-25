@@ -1,24 +1,23 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-front-end/node_modules
-back-end/node_modules
-front-end/.pnp
-front-end/.pnp.js
+*/node_modules
+frontend/.pnp
+frontend/.pnp.js
 
 # testing
-front-end/coverage
+frontend/coverage
 
 # production
-front-end/build
+frontend/build
 
 # misc
-.DS_Store
-./back-end/.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+*/.DS_Store
+*/.env
+*/.env.local
+*/.env.development.local
+*/.env.test.local
+*/.env.production.local
 
 npm-debug.log*
 yarn-debug.log*
@@ -31,7 +30,6 @@ yarn-error.log*
 !.vscode/extensions.json
 *.code-workspace
 
-node_modules
 electron/installers
 electron/dist/
 electron/logo/
