@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Session from './components/session';
 import Display from './components/display';
 import Counter from './components/counter';
-import Break from './components/break';
 import NavBar from './components/navbar';
 import History from './components/history'
 /* import sound from './sound/BeepSound.mp3'; */
@@ -12,6 +10,7 @@ import Login from './components/login'
 import { breakHistory, playHistory, resetHistory, sessionHistory } from './utils/historyData';
 
 import './styles/App.css';
+import Main from './components/main';
 
 const App = () => {
   const [breakValue, setBreakValue] = useState(5);
@@ -160,25 +159,47 @@ const App = () => {
 
   return (
     <div className="container-fluid" id="all">
-      <Router>
-        <NavBar Show={() => setModalShow(true)}/>
-        <Switch>
-          <Route exact path="/">
-            <div id='cent' className='d-flex align-items-center'>
-              <div id="pomodoro" className="container">
+        <Router>
+            <NavBar Show={setModalShow}/>
+            <Switch>
+                <Route exact path="/">
+                    <Main/>
+                </Route>
+                <Route path="/register">
+                    <Register/>
+                </Route>
+                <Route path="/login">
+                    <Login/>
+                </Route>
+            </Switch>
 
-                <div id='control' className="row">
+            <footer className="page-footer font-small blue">
+                <div className="footer-copyright text-center py-3">© 2020 Copyright:
+                    <a href="https://github.com/messaismael/"> Ismael Messa</a>
+                </div>
+            </footer>
+      </Router>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+/* 
+<div id='control' className="row">
                   <Break
-                    input={(event:any) => handleInput('Break', event)}
-                    increment={handleIncrement("Break")}
-                    decrement={handleDecrement("Break")}
+                    input={handleInput}
+                    increment={handleIncrement}
+                    decrement={handleDecrement}
                     breakValue={breakValue}
                     active={active}/>
 
                   <Session
-                    input={(event:any) => handleInput('Session', event)}
-                    increment={handleIncrement("Session")}
-                    decrement={handleDecrement("Session")}
+                    input={handleInput}
+                    increment={handleIncrement}
+                    decrement={handleDecrement}
                     sessionValue={sessionValue}
                     active={active}/>
                 </div>
@@ -196,33 +217,10 @@ const App = () => {
                     <Counter count={count}/>
                   </div>
                 </div>
-                {/* <audio id='beep' src={sound} ref={i => this.audio = i}/> */}
+                {/* <audio id='beep' src={sound} ref={i => this.audio = i}/> 
                 <div>
                   <History
-                    /* history={history} */
-                    /* show={modalShow} */
+                    /* history={history} *
+                    /* show={modalShow} *
                     onHide={() => setModalShow(false)}/>
-                </div>
-              </div>
-            </div>
-          </Route>
-        </Switch>
-        <Route path="/register">
-          <Register/>
-        </Route>
-        <Route path="/login">
-          <Login/>
-        </Route>
-
-        <footer className="page-footer font-small blue">
-          <div className="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="https://github.com/messaismael/">
-              Ismael Dassi</a>
-          </div>
-        </footer>
-      </Router>
-    </div>
-  );
-}
-
-export default App;
+                </div> */

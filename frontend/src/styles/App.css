@@ -47,10 +47,6 @@ body {
   margin:auto;
 }
 
-.arrow:hover {
-  font-size: 55px;
-}
-
 #history {
   overflow-y: auto;
   height: 300px;

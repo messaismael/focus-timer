@@ -1,0 +1,38 @@
+.mode-container{
+    color:#343a40;
+    border: 0px solid red;
+    
+}
+
+.mode-length {
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color:  #343a40;
+    border-radius: 15px;
+    border:  #343a40;
+    color:orange;
+    font-size: 30px;
+    font-weight: bold;
+    padding:5px;
+    text-align: center;
+    width: 100%;
+}
+
+
+.arrow{
+    font-size: 50px;
+}
+.arrow:active{
+    color: #343a4095;
+    font-size: 52px;
+}
+@media only screen and (max-width: 769px) {
+    .mode-container div{
+        text-align: center !important;
+    }
+    .mode-length{
+        margin: 10px auto;
+    }
+}

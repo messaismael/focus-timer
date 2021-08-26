@@ -1,18 +1,19 @@
 #cont {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 20px;
 }
 
 strong {
     font-size: 30px;
 }
 
-.svg {
-    height: 50%
+.svg{
+    height: 50%;
 }
-
+.process-controler{
+    border: 0px solid green;
+}
 #timer-label {
     font-weight: 900;
     font-size: 30px;
@@ -30,7 +31,7 @@ strong {
     font-size: 35px;
 }
 
-.play:hover {
+.play:active {
     font-size: 40px;
 }
 
@@ -49,7 +50,7 @@ strong {
     font-size: 33px;
 }
 
-.redo:hover {
+.redo:active {
     font-size: 38px;
 }
 
@@ -70,9 +71,9 @@ strong {
     .svg{
         height: 200px;
     }
-    #cont > div > div > div{
+    /* #cont > div > div > div{
         margin-top:-84% !important;
-    }
+    } */
     .redo{
         font-size: 23px;
     }
@@ -83,10 +84,10 @@ strong {
     }
 }
 
-@media only screen and (max-width: 576px) and (max-height: 760px)  {
+/* @media only screen and (max-width: 576px) and (max-height: 760px)  {
     #cont > div > div > div{
         margin-top: -67% !important;
-    }
+    } */
 /*
     #reset {
         border:1px solid red;
@@ -97,4 +98,4 @@ strong {
         width: 40px;
     }
 */
-}
+

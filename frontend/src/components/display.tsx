@@ -4,6 +4,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRedo, faPauseCircle, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
+import { Row } from 'react-bootstrap';
 const moment = require( "moment" );
 
 
@@ -21,34 +22,34 @@ const Display: React.FC<PropsDisplay> = (props) => {
 
 
   return (
-    <div id='cont' className="col-sm-6 offset-sm-3  ">
+    <div id='cont' className="mt-3 col-sm-6 offset-sm-3  ">
 
       <CircularProgressbarWithChildren
         value={ props.time * 100 / props.pour }
         strokeWidth={ 2 }
         className='svg'
-        /* id='blink' */
-        styles={ buildStyles( {
-          rotation: 0.25,
-          strokeLinecap: 'round',
-          pathTransitionDuration: 0.5,
-          pathColor: `${( ( props.time / 60 ) ) ? color : "red"}`,
-          textColor: '#343a40',
-          trailColor: '#343a4052',
-          backgroundColor: '#3e98c7',
-        } ) }>
-
-        <div id="timer-label" >{ props.mode }</div>
-        <div>
-          <strong style={{'color': `${ (props.time / 60)? color : "red"}`}} >{ moment( props.time * 1000 ).format( "mm:ss" ) } </strong>
-        </div>
-        <div className='row' id='contr'>
-          <div id="start_stop" className="" onClick={ props.play }>
-            <FontAwesomeIcon icon={ props.active ? faPlayCircle : faPauseCircle } className='play' />
-          </div>
-          <div id='reset' className="" onClick={ props.reset }>
-            <FontAwesomeIcon icon={ faRedo } className='redo' />
-          </div>
+        styles={ 
+          buildStyles({
+            rotation: 0.25,
+            strokeLinecap: 'round',
+            pathTransitionDuration: 0.5,
+            pathColor: `${( ( props.time / 60 ) ) ? color : "red"}`,
+            textColor: '#343a40',
+            trailColor: '#343a4052',
+            backgroundColor: '#3e98c7',
+          })
+        }>
+        <div className='process-controler'>
+            <div id="timer-label" >{ props.mode }</div>
+            <div  className='text-center' style={{fontSize: 25, fontWeight:'bold','color': `${ (props.time / 60)? color : "red"}`}} >{ moment( props.time * 1000 ).format( "mm:ss" ) } </div>
+            <Row id='contr'>
+                <div id="start_stop" className="" onClick={ props.play }>
+                    <FontAwesomeIcon icon={ props.active ? faPlayCircle : faPauseCircle } className='play' />
+                </div>
+                <div id='reset' className="" onClick={ props.reset }>
+                    <FontAwesomeIcon icon={ faRedo } className='redo' />
+                </div>
+            </Row>
         </div>
 
       </CircularProgressbarWithChildren>
