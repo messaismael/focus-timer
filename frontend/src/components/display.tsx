@@ -10,7 +10,7 @@ const moment = require( "moment" );
 
 type PropsDisplay = {
   time: number,
-  pour: number,
+  startTime: number,
   mode: string,
   play: any,
   active: boolean,
@@ -25,7 +25,7 @@ const Display: React.FC<PropsDisplay> = (props) => {
     <div id='cont' className="mt-3 col-sm-6 offset-sm-3  ">
 
       <CircularProgressbarWithChildren
-        value={ props.time * 100 / props.pour }
+        value={ props.time * 100 / props.startTime }
         strokeWidth={ 2 }
         className='svg'
         styles={ 
@@ -44,7 +44,7 @@ const Display: React.FC<PropsDisplay> = (props) => {
             <div  className='text-center' style={{fontSize: 25, fontWeight:'bold','color': `${ (props.time / 60)? color : "red"}`}} >{ moment( props.time * 1000 ).format( "mm:ss" ) } </div>
             <Row id='contr'>
                 <div id="start_stop" className="" onClick={ props.play }>
-                    <FontAwesomeIcon icon={ props.active ? faPlayCircle : faPauseCircle } className='play' />
+                    <FontAwesomeIcon icon={props.active ? faPauseCircle : faPlayCircle} className='play' />
                 </div>
                 <div id='reset' className="" onClick={ props.reset }>
                     <FontAwesomeIcon icon={ faRedo } className='redo' />

@@ -21,7 +21,7 @@ const ModeComponent: React.FC<PropsBreak> = (props) => {
             <Row>
                 <Col md={4} xs={12} className='text-right'>
                     <div>
-                        <Button variant='dark' className="button-arrow" onClick={()=> props.updateModeValue(props.modeValue+1) }>
+                        <Button variant='dark' className="button-arrow" onClick={()=> props.updateModeValue(props.modeValue+1) } disabled={props.active}>
                             <FontAwesomeIcon icon={ faArrowUp } />
                         </Button>
                     </div>
@@ -38,7 +38,7 @@ const ModeComponent: React.FC<PropsBreak> = (props) => {
                 </Col>
                 <Col md={4}  xs={12}className='text-left'>
                     <div>
-                        <Button variant='dark' className="button-arrow" onClick={()=> props.updateModeValue(props.modeValue-1) } disabled={!props.modeValue?true:false}>
+                        <Button variant='dark' className="button-arrow" onClick={()=> props.updateModeValue(props.modeValue-1) } disabled={!props.modeValue?true:props.active}>
                             <FontAwesomeIcon icon={ faArrowDown } />
                         </Button>
                     </div>
