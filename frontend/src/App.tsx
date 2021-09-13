@@ -1,27 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Display from './components/display';
-import Counter from './components/counter';
 import NavBar from './components/navbar';
-import History from './components/history'
-/* import sound from './sound/BeepSound.mp3'; */
 import Register from './components/register';
 import Login from './components/login'
-import { breakHistory, playHistory, resetHistory, sessionHistory } from './utils/historyData';
 
 import './styles/App.css';
 import Main from './components/main';
 
 const App = () => {
-  const [breakValue, setBreakValue] = useState(5);
-  const [sessionValue, setSessionValue] = useState(25);
-  const [time, setTime] = useState(25 * 60);
-  const [active, setActive] = useState(true);
-  const [mode, setMode] = useState('Session');
-  const [count, setCount] = useState(0);
   const [modalShow, setModalShow] = useState(false);
-
-
   /* componentDidUpdate(prevProps, prevState) {
     if (prevState.time === 0 && prevState.mode === "Break") {
       // handle registration on break
@@ -46,9 +33,9 @@ const App = () => {
         count: this.state.count + 1
       })
     }
-  } */
+  }
 
-  /* useEffect(() => {
+   useEffect(() => {
      if (time === 0 && mode === "Break") {
       // handle registration on break
       breakHistory(breakValue)
@@ -70,7 +57,7 @@ const App = () => {
     /* return () => {
       cleanup
     } 
-  }, [breakValue, sessionValue,count, mode, time, active]) */
+  }, [breakValue, sessionValue,count, mode, time, active])
 
   const  handleInput = ( currentmode: string, event: any ) => {
     // match number only
@@ -117,8 +104,8 @@ const App = () => {
     // handle history when user click on reset button
     resetHistory(sessionValue, breakValue, time, mode);
 
-   /*  this.audio.pause();
-    this.audio.currentTime = 0; */
+   this.audio.pause();
+    this.audio.currentTime = 0;
 
     setBreakValue(5);
     setSessionValue(25);
@@ -133,7 +120,7 @@ const App = () => {
 
   const handlePlay = () => {
 
-   /*  if (active) {
+    if (active) {
       // handle history when user start focus timer
       playHistory(sessionValue, time, count);
       // decrement this.state.time after 1 second
@@ -149,10 +136,10 @@ const App = () => {
       // clear value of this.time
       clearInterval()
       //this.setState({active: true})
-    } */
+    } 
   }
   
-  /* let col = 'white';
+   let col = 'white';
   if (time < (60 * 1000)) {
     col = 'red';
   } */
@@ -184,43 +171,3 @@ const App = () => {
 }
 
 export default App;
-
-
-
-/* 
-<div id='control' className="row">
-                  <Break
-                    input={handleInput}
-                    increment={handleIncrement}
-                    decrement={handleDecrement}
-                    breakValue={breakValue}
-                    active={active}/>
-
-                  <Session
-                    input={handleInput}
-                    increment={handleIncrement}
-                    decrement={handleDecrement}
-                    sessionValue={sessionValue}
-                    active={active}/>
-                </div>
-                <div id='display' className=''>
-                  <Display
-                    pour={mode === 'Session'
-                    ? sessionValue * 60
-                    : breakValue * 60}
-                    time={time}
-                    mode={mode}
-                    play={handlePlay}
-                    reset={handleReset}
-                    active={active}/>
-                  <div className=''>
-                    <Counter count={count}/>
-                  </div>
-                </div>
-                {/* <audio id='beep' src={sound} ref={i => this.audio = i}/> 
-                <div>
-                  <History
-                    /* history={history} *
-                    /* show={modalShow} *
-                    onHide={() => setModalShow(false)}/>
-                </div> */

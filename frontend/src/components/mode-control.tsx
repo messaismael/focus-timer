@@ -5,16 +5,20 @@ import {  faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import '../styles/mode-control.css'
 import { Button, Col, Form, Row } from 'react-bootstrap';
 
+/**
+ * @author messaismael
+ * @description this compoment allow to edith the current mode value.
+ * @returns {JSX}
+ */
 type PropsBreak = {
     mode: string,
     updateModeValue: Function,
     modeValue: number,
-    active?: boolean,
+    active: boolean,
 }
-
 const ModeComponent: React.FC<PropsBreak> = (props) => {
 
-    let defValue = props.mode == 'Break'? 5:25;
+    let defValue = props.mode==='Break'? 5:25;
     return (
         <div className='mode-container'>
             <h2 className='mb-3'>{props.mode}</h2>
