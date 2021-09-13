@@ -1,9 +1,12 @@
 .mode-container{
     color:#343a40;
     border: 0px solid red;
-    
 }
 
+.mode-container div.row{
+    width: 100%;
+    margin: auto;
+}
 .mode-length {
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -20,9 +23,23 @@
     width: 100%;
 }
 
+/*hide defauld increment bar */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/*hide defauld increment bar */
 
-.arrow{
-    font-size: 50px;
+.button-arrow{
+    height: 100%;
+    font-size: 29px;
+    border-radius: 50%;
+    padding: 5px 15px;
+    color: orange;
 }
 .arrow:active{
     color: #343a4095;
